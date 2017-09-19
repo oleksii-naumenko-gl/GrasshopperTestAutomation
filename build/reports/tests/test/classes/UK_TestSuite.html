@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class UK_TestSuite</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class UK_TestSuite</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; UK_TestSuite</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">6</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">6</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">18m40.43s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
+</li>
+<li>
+<a href="#tab3">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="UK_Test_1_Login_and_Settings"></a>
+<h3 class="failures">UK_Test_1_Login_and_Settings</h3>
+<span class="code">
+<pre>org.junit.ComparisonFailure: Verify Setting for Making calls : Value expected: Use Grasshopper for in-app calls only, Value found: Use Grasshopper for in-app Calls Only expected:&lt;...sshopper for in-app [calls o]nly&gt; but was:&lt;...sshopper for in-app [Calls O]nly&gt;
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at UK_TestSuite.VerifyTextById(UK_TestSuite.java:1136)
+	at UK_TestSuite.UK_Test_1_Login_and_Settings(UK_TestSuite.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy3.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:377)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="UK_Test_2_Missed_Call_Left_Swipe"></a>
+<h3 class="failures">UK_Test_2_Missed_Call_Left_Swipe</h3>
+<span class="code">
+<pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 203 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'EW.cable.rcn.com', ip: '192.168.1.146', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.3', java.version: '1.8.0_112'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{app=/Users/ewong/Documents/NewAPKs/383-app-prod-release.apk, appPackage=com.grasshopper.dialer, networkConnectionEnabled=true, dontStopAppOnReset=true, warnings={}, appWaitPackage=com.grasshopper.dialer, appWaitActivity=com.grasshopper.dialer.ui.activity.BaseActivity, databaseEnabled=false, deviceName=HT4AFSF02551, platform=LINUX, deviceUDID=HT4AFSF02551, appActivity=com.grasshopper.dialer.ui.activity.BaseActivity, desired={app=/Users/ewong/Documents/NewAPKs/383-app-prod-release.apk, dontStopAppOnReset=true, androidCoverage=HT4AFSF02551, platformVersion=6.0, automationName=Appium, platformName=Android, deviceName=HT4AFSF02551}, androidCoverage=HT4AFSF02551, platformVersion=6.0, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, takesScreenshot=true, javascriptEnabled=true, platformName=Android}]
+Session ID: d17ad111-6fd6-4cb9-95be-67769a193600
+*** Element info: {Using=-android uiautomator, value=new UiSelector().text(&quot;+1 617-990-6284&quot;)}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByAndroidUIAutomator(AndroidDriver.java:365)
+	at io.appium.java_client.MobileBy$ByAndroidUIAutomator.findElement(MobileBy.java:117)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at UK_TestSuite.VerifyText(UK_TestSuite.java:1164)
+	at UK_TestSuite.UK_Test_2_Missed_Call_Left_Swipe(UK_TestSuite.java:410)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy3.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:377)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="UK_Test_3_Missed_Call_Details"></a>
+<h3 class="failures">UK_Test_3_Missed_Call_Details</h3>
+<span class="code">
+<pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 111 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'EW.cable.rcn.com', ip: '192.168.1.146', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.3', java.version: '1.8.0_112'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{app=/Users/ewong/Documents/NewAPKs/383-app-prod-release.apk, appPackage=com.grasshopper.dialer, networkConnectionEnabled=true, dontStopAppOnReset=true, warnings={}, appWaitPackage=com.grasshopper.dialer, appWaitActivity=com.grasshopper.dialer.ui.activity.BaseActivity, databaseEnabled=false, deviceName=HT4AFSF02551, platform=LINUX, deviceUDID=HT4AFSF02551, appActivity=com.grasshopper.dialer.ui.activity.BaseActivity, desired={app=/Users/ewong/Documents/NewAPKs/383-app-prod-release.apk, dontStopAppOnReset=true, androidCoverage=HT4AFSF02551, platformVersion=6.0, automationName=Appium, platformName=Android, deviceName=HT4AFSF02551}, androidCoverage=HT4AFSF02551, platformVersion=6.0, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, takesScreenshot=true, javascriptEnabled=true, platformName=Android}]
+Session ID: 58de5e20-1e1b-46a0-89f2-3861fad153b6
+*** Element info: {Using=-android uiautomator, value=new UiSelector().text(&quot;+1 617-990-6284&quot;)}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByAndroidUIAutomator(AndroidDriver.java:365)
+	at io.appium.java_client.MobileBy$ByAndroidUIAutomator.findElement(MobileBy.java:117)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at UK_TestSuite.VerifyText(UK_TestSuite.java:1164)
+	at UK_TestSuite.UK_Test_3_Missed_Call_Details(UK_TestSuite.java:507)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy3.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:377)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="UK_Test_4_Voicemail_Navigation_Bar_and_Left_Swipe"></a>
+<h3 class="failures">UK_Test_4_Voicemail_Navigation_Bar_and_Left_Swipe</h3>
+<span class="code">
+<pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 269 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'EW.cable.rcn.com', ip: '192.168.1.146', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.3', java.version: '1.8.0_112'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{app=/Users/ewong/Documents/NewAPKs/383-app-prod-release.apk, appPackage=com.grasshopper.dialer, networkConnectionEnabled=true, dontStopAppOnReset=true, warnings={}, appWaitPackage=com.grasshopper.dialer, appWaitActivity=com.grasshopper.dialer.ui.activity.BaseActivity, databaseEnabled=false, deviceName=HT4AFSF02551, platform=LINUX, deviceUDID=HT4AFSF02551, appActivity=com.grasshopper.dialer.ui.activity.BaseActivity, desired={app=/Users/ewong/Documents/NewAPKs/383-app-prod-release.apk, dontStopAppOnReset=true, androidCoverage=HT4AFSF02551, platformVersion=6.0, automationName=Appium, platformName=Android, deviceName=HT4AFSF02551}, androidCoverage=HT4AFSF02551, platformVersion=6.0, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, takesScreenshot=true, javascriptEnabled=true, platformName=Android}]
+Session ID: ac33b8a3-f006-4f5f-98bc-1b04239a59ed
+*** Element info: {Using=-android uiautomator, value=new UiSelector().text(&quot;Ext 0 - Default Extension&quot;)}
+	at sun.reflect.GeneratedConstructorAccessor9.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByAndroidUIAutomator(AndroidDriver.java:365)
+	at io.appium.java_client.MobileBy$ByAndroidUIAutomator.findElement(MobileBy.java:117)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at UK_TestSuite.VerifyText(UK_TestSuite.java:1164)
+	at UK_TestSuite.UK_Test_4_Voicemail_Navigation_Bar_and_Left_Swipe(UK_TestSuite.java:632)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy3.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:377)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="UK_Test_5_Voicemail_Details"></a>
+<h3 class="failures">UK_Test_5_Voicemail_Details</h3>
+<span class="code">
+<pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 214 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'EW.cable.rcn.com', ip: '192.168.1.146', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.3', java.version: '1.8.0_112'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{app=/Users/ewong/Documents/NewAPKs/383-app-prod-release.apk, appPackage=com.grasshopper.dialer, networkConnectionEnabled=true, dontStopAppOnReset=true, warnings={}, appWaitPackage=com.grasshopper.dialer, appWaitActivity=com.grasshopper.dialer.ui.activity.BaseActivity, databaseEnabled=false, deviceName=HT4AFSF02551, platform=LINUX, deviceUDID=HT4AFSF02551, appActivity=com.grasshopper.dialer.ui.activity.BaseActivity, desired={app=/Users/ewong/Documents/NewAPKs/383-app-prod-release.apk, dontStopAppOnReset=true, androidCoverage=HT4AFSF02551, platformVersion=6.0, automationName=Appium, platformName=Android, deviceName=HT4AFSF02551}, androidCoverage=HT4AFSF02551, platformVersion=6.0, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, takesScreenshot=true, javascriptEnabled=true, platformName=Android}]
+Session ID: fa425dda-d094-45c7-b582-0a538a1b3c81
+*** Element info: {Using=-android uiautomator, value=new UiSelector().text(&quot;Ext 0 - Default Extension&quot;)}
+	at sun.reflect.GeneratedConstructorAccessor9.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByAndroidUIAutomator(AndroidDriver.java:365)
+	at io.appium.java_client.MobileBy$ByAndroidUIAutomator.findElement(MobileBy.java:117)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at UK_TestSuite.VerifyText(UK_TestSuite.java:1164)
+	at UK_TestSuite.UK_Test_5_Voicemail_Details(UK_TestSuite.java:784)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy3.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:377)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="UK_Test_6_Missed_Call_and_Voicemail_Push_Notification"></a>
+<h3 class="failures">UK_Test_6_Missed_Call_and_Voicemail_Push_Notification</h3>
+<span class="code">
+<pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 61 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'EW.cable.rcn.com', ip: '192.168.1.146', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.3', java.version: '1.8.0_112'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{app=/Users/ewong/Documents/NewAPKs/383-app-prod-release.apk, appPackage=com.grasshopper.dialer, networkConnectionEnabled=true, dontStopAppOnReset=true, warnings={}, appWaitPackage=com.grasshopper.dialer, appWaitActivity=com.grasshopper.dialer.ui.activity.BaseActivity, databaseEnabled=false, deviceName=HT4AFSF02551, platform=LINUX, deviceUDID=HT4AFSF02551, appActivity=com.grasshopper.dialer.ui.activity.BaseActivity, desired={app=/Users/ewong/Documents/NewAPKs/383-app-prod-release.apk, dontStopAppOnReset=true, androidCoverage=HT4AFSF02551, platformVersion=6.0, automationName=Appium, platformName=Android, deviceName=HT4AFSF02551}, androidCoverage=HT4AFSF02551, platformVersion=6.0, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, takesScreenshot=true, javascriptEnabled=true, platformName=Android}]
+Session ID: 3735fdc6-4318-4738-ac3a-bffa5aa1ed16
+*** Element info: {Using=-android uiautomator, value=new UiSelector().text(&quot;+1 617-990-6284&quot;)}
+	at sun.reflect.GeneratedConstructorAccessor9.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByAndroidUIAutomator(AndroidDriver.java:365)
+	at io.appium.java_client.MobileBy$ByAndroidUIAutomator.findElement(MobileBy.java:117)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at UK_TestSuite.VerifyText(UK_TestSuite.java:1164)
+	at UK_TestSuite.UK_Test_6_Missed_Call_and_Voicemail_Push_Notification(UK_TestSuite.java:901)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy3.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:377)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">UK_Test_1_Login_and_Settings</td>
+<td>3m1.67s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">UK_Test_2_Missed_Call_Left_Swipe</td>
+<td>2m42.01s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">UK_Test_3_Missed_Call_Details</td>
+<td>2m57.63s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">UK_Test_4_Voicemail_Navigation_Bar_and_Left_Swipe</td>
+<td>3m12.65s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">UK_Test_5_Voicemail_Details</td>
+<td>2m56.31s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">UK_Test_6_Missed_Call_and_Voicemail_Push_Notification</td>
+<td>3m50.16s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>Step 1: UK_Test_1_Login_and_Settings
+Step 2: Click Login Button  - Object found by ResourceId: com.grasshopper.dialer:id/sign_in
+Step 3: Validate error Message - No user name  - Value expected: Enter valid User Id matches Value found: Enter valid User Id on Xpath: //android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/TextInputLayout[1]/android.widget.LinearLayout[1]/android.widget.TextView[1]
+Step 4: Enter user name  - Text entered: ewong@globalsqemail.com, Found by ResourceId: com.grasshopper.dialer:id/email_input
+Step 5: Click Login Button  - Object found by ResourceId: com.grasshopper.dialer:id/sign_in
+Step 6: Validate error Message - No Password  - Value expected: Password too short matches Value found: Password too short on Xpath: //android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/TextInputLayout[2]/android.widget.LinearLayout[1]/android.widget.TextView[1]
+Step 7: Enter invalid password  - Text entered: Zxcvbnmlkjhgfdsa, Found by ResourceId: com.grasshopper.dialer:id/password_input
+Step 8: Click Login Button  - Object found by ResourceId: com.grasshopper.dialer:id/sign_in
+Step 9: Verify Sign in Failed pop up  - Value expected: Sign In Failed matches Value found: Sign In Failed on ResourceId: com.grasshopper.dialer:id/alertTitle
+Step 10: Verify Sign in Failed message  - Value expected: A Sign in error occurred. Please try again. matches Value found: A Sign in error occurred. Please try again. on ResourceId: android:id/message
+Step 11: Verify OK Button Exists  - Value expected: OK matches Value found: OK on ResourceId: android:id/button1
+Step 12: Click OK Button  - Object found by ResourceId: android:id/button1
+Step 13: Clear text field by Id  - Found by ResourceId  - com.grasshopper.dialer:id/password_input
+Step 14: Enter valid password 1  - Text entered: Testing123, Found by ResourceId: com.grasshopper.dialer:id/password_input
+Step 15: Click login button  - Object found by ResourceId: com.grasshopper.dialer:id/sign_in
+Step 16: Verify Select Account pop up  - Value expected: You have more than one Grasshopper account matches Value found: You have more than one Grasshopper account on ResourceId: com.grasshopper.dialer:id/alertTitle
+Step 17: Verify Select Account message  - Value expected: please select the account you want to sign into: matches Value found: please select the account you want to sign into: on ResourceId: android:id/message
+Step 18: Verify US Grasshopper option  - Value expected: US Grasshopper matches Value found: US Grasshopper on ResourceId: android:id/button1
+Step 19: Verify UK Grasshopper option  - Value expected: UK Grasshopper matches Value found: UK Grasshopper on ResourceId: android:id/button2
+Step 20: Select UK Account  - Object found by ResourceId: android:id/button2
+Step 21:  Wait for: 3 seconds
+Step 22: Verify Permissions to manage phone calls  - Value expected: Allow Grasshopper to make and manage phone calls? matches Value found: Allow Grasshopper to make and manage phone calls? on ResourceId: com.android.packageinstaller:id/permission_message
+Step 23: Select allow permission to manage phone calls  - Object found by ResourceId: com.android.packageinstaller:id/permission_allow_button
+Step 24: Verify Get Started text  - Value expected: Get Started matches Value found: Get Started on Xpath: //android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.widget.TextView[1]
+Step 25: Verify Enter Your Mobile Number text - Value expected: Enter Your Mobile Number matches Value found: Enter Your Mobile Number on ResourceId: com.grasshopper.dialer:id/title
+Step 26: Verify Phone Number gets auto populated  - Value expected: 6179906284 matches Value found: 6179906284 on ResourceId: com.grasshopper.dialer:id/phone_input
+Step 27: Verify We need this to register your cell phone text  - Value expected: We need this to register your cell phone as
+ a trusted number for making outgoing calls. matches Value found: We need this to register your cell phone as
+ a trusted number for making outgoing calls. on ResourceId: com.grasshopper.dialer:id/sub_title_description
+Step 28: Clear Phone Number Text Field  - Found by ResourceId  - com.grasshopper.dialer:id/phone_input
+Step 29: Enter correct phone number  - Text entered: 7824978311, Found by ResourceId: com.grasshopper.dialer:id/phone_input
+Step 30: Click next from Enter your phone number  - Object found by ResourceId: com.grasshopper.dialer:id/action_next
+Step 31: Verify Number Confirmation pop up  - Value expected: Number Confirmation
+07824 978311 matches Value found: Number Confirmation
+07824 978311 on ResourceId: com.grasshopper.dialer:id/alertTitle
+Step 32: Verify is the number correct? message  - Value expected: Is the phone number above correct? matches Value found: Is the phone number above correct? on ResourceId: android:id/message
+Step 33: Verify Yes Button  - Value expected: Yes matches Value found: Yes on ResourceId: android:id/button1
+Step 34: Verify No Button  - Value expected: No matches Value found: No on ResourceId: android:id/button2
+Step 35: Click Yes Button  - Object found by ResourceId: android:id/button1
+Step 36: Verify Permissions to manage phone calls  - Value expected: Allow Grasshopper to access your contacts? matches Value found: Allow Grasshopper to access your contacts? on ResourceId: com.android.packageinstaller:id/permission_message
+Step 37: Select allow permission to manage phone calls  - Object found by ResourceId: com.android.packageinstaller:id/permission_allow_button
+Step 38: Verify Legal Disclaimer pop up  - Value expected: Legal Disclaimer matches Value found: Legal Disclaimer on ResourceId: com.grasshopper.dialer:id/alertTitle
+Step 39: Verify Content of the Legal Disclaimer pop up  - Value expected: The grasshopper app and system is not intended or designed for dialing 999 or any other emergency number. Please use your phone's dialer for these purposes. matches Value found: The grasshopper app and system is not intended or designed for dialing 999 or any other emergency number. Please use your phone's dialer for these purposes. on ResourceId: android:id/message
+Step 40: Verify  OK button - Value expected: OK matches Value found: OK on ResourceId: android:id/button1
+Step 41: Click OK button - Object found by ResourceId: android:id/button1
+Step 42: Verify Permissions to manage phone calls  - Value expected: Allow Grasshopper to access photos, media, and files on your device? matches Value found: Allow Grasshopper to access photos, media, and files on your device? on ResourceId: com.android.packageinstaller:id/permission_message
+Step 43: Select allow permission to manage phone calls  - Object found by ResourceId: com.android.packageinstaller:id/permission_allow_button
+Step 44: Verify Time to make a Call  - Object found by Text: Time to Make a Call!
+Step 45: Verify Time to make a Call body  - Object found by Text: Call a colleague or trusted friend.
+Step 46: Tap once to remove the first tour banner  - Found by ResourceId  - com.grasshopper.dialer:id/toolbar
+Step 47: Click Inbox  - Object found by ResourceId: android:id/text1
+Step 48: Click Voicemails  - Object found by Text: Voicemails
+Step 49: Verify Voicemails is the first item in the dropdown list  - Value expected: Voicemails matches Value found: Voicemails on ResourceId: android:id/text1
+Step 50: Click Voicemails  - Object found by ResourceId: android:id/text1
+Step 51: Click Faxes  - Object found by Text: Faxes
+Step 52: Verify that Faxes is the first in the dropdown list  - Value expected: Faxes matches Value found: Faxes on ResourceId: android:id/text1
+Step 53: Click Faxes  - Object found by ResourceId: android:id/text1
+Step 54: Click Deleted  - Object found by Text: Deleted
+Step 55: Click Deleted  - Object found by ResourceId: android:id/text1
+Step 56: Click Inbox  - Object found by Text: Inbox
+Step 57: Click on Recent  - Object found by Text: Recent
+Step 58: Click All Calls  - Object found by ResourceId: android:id/text1
+Step 59: Click Missed  - Object found by Text: Missed
+Step 60: Click Missed  - Object found by ResourceId: android:id/text1
+Step 61: Click Received  - Object found by Text: Received
+Step 62: Click Received  - Object found by ResourceId: android:id/text1
+Step 63: Click Dialed  - Object found by Text: Dialed
+Step 64: Click Received  - Object found by ResourceId: android:id/text1
+Step 65: Click All Calls  - Object found by Text: All Calls
+Step 66: Verify that All Calls is the first in the dropdown list  - Value expected: All Calls matches Value found: All Calls on ResourceId: android:id/text1
+Step 67: Click on Call  - Object found by Text: Call
+Step 68: Verify the phone number is the first in the dropdown list  - Value expected: +1 781-514-7065 matches Value found: +1 781-514-7065 on ResourceId: android:id/text1
+Step 69: Click Number to dial  - Object found by ResourceId: android:id/text1
+Step 70: Select 020 3868 6110  - Object found by Text: 020 3868 6110
+Step 71: Verify the Selected number is the first in the dropdown list  - Value expected: 020 3868 6110 matches Value found: 020 3868 6110 on ResourceId: android:id/text1
+Step 72: Click Number to dial  - Object found by ResourceId: android:id/text1
+Step 73: Click Select 020 3868 6321  - Object found by Text: 020 3868 6321
+Step 74: Click Number to dial  - Object found by ResourceId: android:id/text1
+Step 75: Click Select 0800 086 9305  - Object found by Text: 0800 086 9305
+Step 76: Click Number to dial  - Object found by ResourceId: android:id/text1
+Step 77: Click Select +1 781-514-7065  - Object found by Text: +1 781-514-7065
+Step 78: Verify the Selected number is the first in the dropdown list  - Value expected: +1 781-514-7065 matches Value found: +1 781-514-7065 on ResourceId: android:id/text1
+Step 79: Click on Contacts  - Object found by Text: Contacts
+Step 80: Search for Iphone 6s Contact  - Object found by Text: Iphone 6s
+Step 81: Verify Contact Iphone 6s  - Value expected: Iphone 6s matches Value found: Iphone 6s on Xpath: //android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.widget.TextView[1]
+Step 82: Go back to Contacts  - Object found by Class: android.widget.ImageButton
+Step 83: Go back to make a Call  - Object found by Class: android.widget.ImageButton
+Step 84: Click on Favorites  - Object found by Text: Favorites
+Step 85: Verify Favorites  - Object found by Text: Favorites
+Step 86: Click Edit  - Object found by ResourceId: com.grasshopper.dialer:id/edit
+Step 87: Click Add  - Object found by ResourceId: com.grasshopper.dialer:id/add
+Step 88: Search for Iphone 6s Contact  - Object found by Text: Iphone 6s
+Step 89: Verify Contact added to Favorites  - Value expected: Iphone 6s matches Value found: Iphone 6s on ResourceId: com.grasshopper.dialer:id/contact_name
+Step 90: Go back to Calls  - Object found by Class: android.widget.ImageButton
+Step 91: Click on Settings  - Object found by Text: Settings
+Step 92: Verify Settings page has been displayed  - Object found by Text: Settings
+Step 93: Verify Sign out button is displayed  - Value expected: Sign Out matches Value found: Sign Out on ResourceId: com.grasshopper.dialer:id/logout
+Step 94: Verify First and Last Name are displayed  - Value expected: EUK WUK matches Value found: EUK WUK on ResourceId: com.grasshopper.dialer:id/tv_name
+Step 95: Verify &quot;Your Number is:&quot; displayed  - Value expected: Your Number is:  matches Value found: Your Number is:  on ResourceId: com.grasshopper.dialer:id/tv_number_label
+Step 96: Verify your GH Number is displayed  - Value expected: +1 781-514-7065 matches Value found: +1 781-514-7065 on ResourceId: com.grasshopper.dialer:id/tv_number
+Step 97: Verify Advance Settings is displayed  - Value expected: Advanced settings matches Value found: Advanced settings on ResourceId: com.grasshopper.dialer:id/outgoing_calls_title
+Step 98: Verify Sync &amp; Notification Settings are displayed  - Value expected: Sync &amp; Notification Settings matches Value found: Sync &amp; Notification Settings on ResourceId: com.grasshopper.dialer:id/tv_sync_settings_text
+Step 99: Verify Subtext for Sync &amp; Notifications are displayed  - Value expected: Show in App and Push Notification Settings matches Value found: Show in App and Push Notification Settings on ResourceId: com.grasshopper.dialer:id/tv_sync_settings_subtext
+Step 100: Click on Sync &amp; Notifications  - Object found by Text: Sync &amp; Notification Settings
+Step 101: Verify Title Sync &amp; Notification Settings is displayed  - Object found by Text: Sync &amp; Notification Settings
+Step 102: Verify Save button is displayed  - Value expected: Save matches Value found: Save on ResourceId: com.grasshopper.dialer:id/save
+Step 103: Verify Save button is not Enabled - Value expected: FALSE matches Value found: Save on ResourceId: com.grasshopper.dialer:id/save
+Step 104: Verify Title: voicemails, faxes and missed calls  - Value expected: voicemails, faxes and missed calls matches Value found: voicemails, faxes and missed calls on ResourceId: com.grasshopper.dialer:id/title
+Step 105: Verify subtext for voicemails, faxes, missed calls numbers is displayed  - Object found by Text: Choose which extensions to show in the Inbox and Recent views. Optionally enable push notifications for your extensions.
+Step 106: Scroll until finding: Ext 0  - Object found by Text: Ext 0
+Step 107: Verify Show in App  - Object found by Text: Show in App
+Step 108: Verify Ext 0 Checkbox Show in app is checked  - Value expected: TRUE matches Value found:  on ResourceId: android.widget.CheckBox
+Step 109: Verify missed call notifications is displayed  - Value expected: Missed Calls
+Notifications matches Value found: Missed Calls
+Notifications on ResourceId: com.grasshopper.dialer:id/missed_calls
+Step 110: Verify Ext 0 Checkbox Missed Calls is unchecked  - Value expected: FALSE matches Value found:  on ResourceId: android.widget.CheckBox
+Step 111: Verify Message notifications is displayed  - Value expected: Messages
+Notifications matches Value found: Messages
+Notifications on ResourceId: com.grasshopper.dialer:id/messages
+Step 112: Verify Ext 0 Checkbox Messages is unchecked  - Value expected: FALSE matches Value found:  on ResourceId: android.widget.CheckBox
+Step 113: Click Cancel - Object found by Class: android.widget.ImageButton
+Step 114: Verify Access Number  - Value expected: Access Number matches Value found: Access Number on ResourceId: com.grasshopper.dialer:id/tv_access_number
+Step 115: Verify Setting for Access Number  - Value expected: Default matches Value found: Default on ResourceId: com.grasshopper.dialer:id/tv_access_number_subtext
+Step 116: Click Access Number  - Object found by Text: Access Number
+Step 117: Verify Access Number Title  - Object found by Text: Access Number
+Step 118: Verify subtext on Access Number  - Value expected: Change your access number to a UK local number to make calls from outside UK. International rates will apply. matches Value found: Change your access number to a UK local number to make calls from outside UK. International rates will apply. on ResourceId: com.grasshopper.dialer:id/description
+Step 119: Verify Use +44 text  - Value expected: Use +44 while dialing matches Value found: Use +44 while dialing on ResourceId: com.grasshopper.dialer:id/plus_one
+Step 120: Verify Use +44 text is turned ON  - Value expected: ON matches Value found: ON on ResourceId: com.grasshopper.dialer:id/plus_one_switch_button
+Step 121: Verify Use +44 text Switch is Checked  - Value expected: TRUE matches Value found: ON on ResourceId: android.widget.Switch
+Step 122: Turn off Use +44 switch  - Object found by ResourceId: com.grasshopper.dialer:id/plus_one_switch_button
+Step 123: Verify Use +44 text is turned OFF - Value expected: OFF matches Value found: OFF on ResourceId: com.grasshopper.dialer:id/plus_one_switch_button
+Step 124: Verify Use +44 text Switch is Not Checked  - Value expected: FALSE matches Value found: OFF on ResourceId: android.widget.Switch
+Step 125: Verify Option Default for Access Number  - Object found by Text: Default
+Step 126: Verify Option Local for Access Number  - Object found by Text: Local
+Step 127: Verify Option Freephone for Access Number  - Object found by Text: Freephone
+Step 128: Click on Local Access Number  - Object found by Text: Local
+Step 129: Click go back button  - Object found by Class: android.widget.ImageButton
+Step 130: Verify Setting for Access Number  - Value expected: Local matches Value found: Local on ResourceId: com.grasshopper.dialer:id/tv_access_number_subtext
+Step 131: Click on Local  - Object found by Text: Local
+Step 132: Verify Access Number Title  - Object found by Text: Access Number
+Step 133: Click on Freephone Access Number  - Object found by Text: Freephone
+Step 134: Click go back button  - Object found by Class: android.widget.ImageButton
+Step 135: Verify Setting for Access Number  - Value expected: Toll free matches Value found: Toll free on ResourceId: com.grasshopper.dialer:id/tv_access_number_subtext
+Step 136: Click on Toll free  - Object found by Text: Toll free
+Step 137: Verify Access Number Title  - Object found by Text: Access Number
+Step 138: Verify Use +44 text is turned OFF  - Value expected: OFF matches Value found: OFF on ResourceId: com.grasshopper.dialer:id/plus_one_switch_button
+Step 139: Verify Use +44 text Switch is Not Checked  - Value expected: FALSE matches Value found: OFF on ResourceId: android.widget.Switch
+Step 140: Turn off Use +44 switch  - Object found by ResourceId: com.grasshopper.dialer:id/plus_one_switch_button
+Step 141: Verify Use +44 text is turned ON  - Value expected: ON matches Value found: ON on ResourceId: com.grasshopper.dialer:id/plus_one_switch_button
+Step 142: Verify Use +44 text Switch is Checked  - Value expected: TRUE matches Value found: ON on ResourceId: android.widget.Switch
+Step 143: Click on Default Access Number  - Object found by Text: Default
+Step 144: Click go back button  - Object found by Class: android.widget.ImageButton
+Step 145: Verify Setting for Access Number  - Value expected: Default matches Value found: Default on ResourceId: com.grasshopper.dialer:id/tv_access_number_subtext
+Step 146: Verify Making calls is displayed  - Value expected: Making Calls matches Value found: Making Calls on ResourceId: com.grasshopper.dialer:id/tv_making_call
+Step 1: UK_Test_2_Missed_Call_Left_Swipe
+Step 2: Enter user name  - Text entered: ewong@globalsqemail.com, Found by ResourceId: com.grasshopper.dialer:id/email_input
+Step 3: Enter valid password 1  - Text entered: Testing123, Found by ResourceId: com.grasshopper.dialer:id/password_input
+Step 4: Click Login Button  - Object found by ResourceId: com.grasshopper.dialer:id/sign_in
+Step 5: Verify Select Account message  - Value expected: please select the account you want to sign into: matches Value found: please select the account you want to sign into: on ResourceId: android:id/message
+Step 6: Select UK Account  - Object found by ResourceId: android:id/button2
+Step 7:  Wait for: 3 seconds
+Step 8: Select allow permission to manage phone calls  - Object found by ResourceId: com.android.packageinstaller:id/permission_allow_button
+Step 9: Clear Phone Number Text Field  - Found by ResourceId  - com.grasshopper.dialer:id/phone_input
+Step 10: Enter +16179906284 as trusted numbers - Text entered: +16179906284, Found by ResourceId: com.grasshopper.dialer:id/phone_input
+Step 11: Click next from Enter your phone number  - Object found by ResourceId: com.grasshopper.dialer:id/action_next
+Step 12: Verify Yes Button  - Object found by ResourceId: android:id/button1
+Step 13: Verify Permissions to manage phone calls  - Value expected: Allow Grasshopper to access your contacts? matches Value found: Allow Grasshopper to access your contacts? on ResourceId: com.android.packageinstaller:id/permission_message
+Step 14: Select allow permission to manage phone calls  - Object found by ResourceId: com.android.packageinstaller:id/permission_allow_button
+Step 15: Click OK button - Object found by ResourceId: android:id/button1
+Step 16: Select allow permission to manage phone calls  - Object found by ResourceId: com.android.packageinstaller:id/permission_allow_button
+Step 17: Tap once to remove the first tour banner  - Found by ResourceId  - com.grasshopper.dialer:id/toolbar
+Step 18: Click on Settings  - Object found by Text: Settings
+Step 19: Click Access Number  - Object found by Text: Access Number
+Step 20: Verify Access Number Title  - Object found by Text: Access Number
+Step 21: Turn off Use +44 switch  - Object found by ResourceId: com.grasshopper.dialer:id/plus_one_switch_button
+Step 22: Verify Use +44 text is turned OFF - Value expected: OFF matches Value found: OFF on ResourceId: com.grasshopper.dialer:id/plus_one_switch_button
+Step 23: Verify Use +44 text Switch is Not Checked  - Value expected: FALSE matches Value found: OFF on ResourceId: android.widget.Switch
+Step 24: Click go back button  - Object found by Class: android.widget.ImageButton
+Step 25: HOME - Button has been pressed
+Step 26: Click Native phone dialer  - Object found by Content Description: Phone
+Step 27: Time to start calling: Mon Mar 20 16:08:04 EDT 2017
+Step 28: LongPress on object found by ResourceID: com.htc.contacts:id/zero
+Step 29: Click 2  - Object found by ResourceId: com.htc.contacts:id/four
+Step 30: Click 2  - Object found by ResourceId: com.htc.contacts:id/four
+Step 31: Click 2  - Object found by ResourceId: com.htc.contacts:id/two
+Step 32: Click 0  - Object found by ResourceId: com.htc.contacts:id/zero
+Step 33: Click 2  - Object found by ResourceId: com.htc.contacts:id/three
+Step 34: Click 5  - Object found by ResourceId: com.htc.contacts:id/eight
+Step 35: Click 0  - Object found by ResourceId: com.htc.contacts:id/six
+Step 36: Click 5  - Object found by ResourceId: com.htc.contacts:id/eight
+Step 37: Click 1  - Object found by ResourceId: com.htc.contacts:id/six
+Step 38: Click 0  - Object found by ResourceId: com.htc.contacts:id/three
+Step 39: Click 4  - Object found by ResourceId: com.htc.contacts:id/two
+Step 40: Click 2  - Object found by ResourceId: com.htc.contacts:id/one
+Step 41: Click 2  - Object found by ResourceId: com.htc.contacts:id/center_button
+Step 42:  Wait for: 9 seconds
+Step 43: Click 2  - Object found by ResourceId: com.android.phone:id/cmd_bar_imgbtn_1
+Step 44:  Wait for: 5 seconds
+Step 45: Click 0 to reach Extension 0  - Object found by ResourceId: com.android.phone:id/zero
+Step 46:  Wait for: 8 seconds
+Step 47: End Call  - Object found by ResourceId: com.android.phone:id/cmd_bar_btn_1
+Step 48:  Wait for: 10 seconds
+Step 49: HOME - Button has been pressed
+Step 50: Click All apps  - Object found by Content Description: All apps
+Step 51: Search and start Grasshopper app  - Object found by Text: Grasshopper
+Step 52:  Wait for: 15 seconds
+Step 53: Click on Inbox  - Object found by Text: Inbox
+Step 54:  Wait for: 15 seconds
+Step 55: Click on Recent  - Object found by Text: Recent
+Step 56:  Wait for: 8 seconds
+Step 57: ***FAILED to - Verify the caller ID on the missed call : Object not found due Invalid Text: +1 617-990-6284
+Screenshot on Error: This error was found in this View: /Users/ewong/IdeaProjects/ghandroidapp/Screenshots_on_error/UK_Test_2_Missed_Call_Left_Swipe_Step_57_Verify the caller ID on the missed call .jpg
+Step 1: UK_Test_3_Missed_Call_Details
+Step 2: Enter user name  - Text entered: ewong@globalsqemail.com, Found by ResourceId: com.grasshopper.dialer:id/email_input
+Step 3: Enter valid password 1  - Text entered: Testing123, Found by ResourceId: com.grasshopper.dialer:id/password_input
+Step 4: Click Login Button  - Object found by ResourceId: com.grasshopper.dialer:id/sign_in
+Step 5: Verify Select Account message  - Value expected: please select the account you want to sign into: matches Value found: please select the account you want to sign into: on ResourceId: android:id/message
+Step 6: Select UK Account  - Object found by ResourceId: android:id/button2
+Step 7:  Wait for: 3 seconds
+Step 8: Select allow permission to manage phone calls  - Object found by ResourceId: com.android.packageinstaller:id/permission_allow_button
+Step 9: Clear Phone Number Text Field  - Found by ResourceId  - com.grasshopper.dialer:id/phone_input
+Step 10: Enter +16179906284 as trusted numbers - Text entered: +16179906284, Found by ResourceId: com.grasshopper.dialer:id/phone_input
+Step 11: Click next from Enter your phone number  - Object found by ResourceId: com.grasshopper.dialer:id/action_next
+Step 12: Verify Yes Button  - Object found by ResourceId: android:id/button1
+Step 13: Verify Permissions to manage phone calls  - Value expected: Allow Grasshopper to access your contacts? matches Value found: Allow Grasshopper to access your contacts? on ResourceId: com.android.packageinstaller:id/permission_message
+Step 14: Select allow permission to manage phone calls  - Object found by ResourceId: com.android.packageinstaller:id/permission_allow_button
+Step 15: Click OK button - Object found by ResourceId: android:id/button1
+Step 16: Select allow permission to manage phone calls  - Object found by ResourceId: com.android.packageinstaller:id/permission_allow_button
+Step 17: Tap once to remove the first tour banner  - Found by ResourceId  - com.grasshopper.dialer:id/toolbar
+Step 18: Click on Settings  - Object found by Text: Settings
+Step 19: Click Access Number  - Object found by Text: Access Number
+Step 20: Verify Access Number Title  - Object found by Text: Access Number
+Step 21: Turn off Use +44 switch  - Object found by ResourceId: com.grasshopper.dialer:id/plus_one_switch_button
+Step 22: Verify Use +44 text is turned OFF - Value expected: OFF matches Value found: OFF on ResourceId: com.grasshopper.dialer:id/plus_one_switch_button
+Step 23: Verify Use +44 text Switch is Not Checked  - Value expected: FALSE matches Value found: OFF on ResourceId: android.widget.Switch
+Step 24: Click go back button  - Object found by Class: android.widget.ImageButton
+Step 25: HOME - Button has been pressed
+Step 26: Click Native phone dialer  - Object found by Content Description: Phone
+Step 27: Initial Time: Mon Mar 20 16:10:46 EDT 2017
+Step 28: Waiting time before calling: 15 Seconds
+Step 29: Time to start calling: Mon Mar 20 16:11:01 EDT 2017
+Step 30: LongPress on object found by ResourceID: com.htc.contacts:id/zero
+Step 31: Click 2  - Object found by ResourceId: com.htc.contacts:id/four
+Step 32: Click 2  - Object found by ResourceId: com.htc.contacts:id/four
+Step 33: Click 2  - Object found by ResourceId: com.htc.contacts:id/two
+Step 34: Click 0  - Object found by ResourceId: com.htc.contacts:id/zero
+Step 35: Click 2  - Object found by ResourceId: com.htc.contacts:id/three
+Step 36: Click 5  - Object found by ResourceId: com.htc.contacts:id/eight
+Step 37: Click 0  - Object found by ResourceId: com.htc.contacts:id/six
+Step 38: Click 5  - Object found by ResourceId: com.htc.contacts:id/eight
+Step 39: Click 1  - Object found by ResourceId: com.htc.contacts:id/six
+Step 40: Click 0  - Object found by ResourceId: com.htc.contacts:id/three
+Step 41: Click 4  - Object found by ResourceId: com.htc.contacts:id/two
+Step 42: Click 2  - Object found by ResourceId: com.htc.contacts:id/one
+Step 43: Click 2  - Object found by ResourceId: com.htc.contacts:id/center_button
+Step 44:  Wait for: 9 seconds
+Step 45: Click 2  - Object found by ResourceId: com.android.phone:id/cmd_bar_imgbtn_1
+Step 46:  Wait for: 5 seconds
+Step 47: Click 0 to reach Extension 0  - Object found by ResourceId: com.android.phone:id/zero
+Step 48:  Wait for: 8 seconds
+Step 49: End Call  - Object found by ResourceId: com.android.phone:id/cmd_bar_btn_1
+Step 50:  Wait for: 10 seconds
+Step 51: HOME - Button has been pressed
+Step 52: Click All apps  - Object found by Content Description: All apps
+Step 53: Search and start Grasshopper app  - Object found by Text: Grasshopper
+Step 54:  Wait for: 15 seconds
+Step 55: Click on Inbox  - Object found by Text: Inbox
+Step 56:  Wait for: 15 seconds
+Step 57: Click on Recent  - Object found by Text: Recent
+Step 58:  Wait for: 8 seconds
+Step 59: ***FAILED to - Verify the caller ID on the missed call : Object not found due Invalid Text: +1 617-990-6284
+Screenshot on Error: This error was found in this View: /Users/ewong/IdeaProjects/ghandroidapp/Screenshots_on_error/UK_Test_3_Missed_Call_Details_Step_59_Verify the caller ID on the missed call .jpg
+Step 1: UK_Test_4_Voicemail_Navigation_Bar_and_Left_Swipe
+Step 2: Enter user name  - Text entered: ewong@globalsqemail.com, Found by ResourceId: com.grasshopper.dialer:id/email_input
+Step 3: Enter valid password 1  - Text entered: Testing123, Found by ResourceId: com.grasshopper.dialer:id/password_input
+Step 4: Click Login Button  - Object found by ResourceId: com.grasshopper.dialer:id/sign_in
+Step 5: Verify Select Account message  - Value expected: please select the account you want to sign into: matches Value found: please select the account you want to sign into: on ResourceId: android:id/message
+Step 6: Select UK Account  - Object found by ResourceId: android:id/button2
+Step 7:  Wait for: 3 seconds
+Step 8: Select allow permission to manage phone calls  - Object found by ResourceId: com.android.packageinstaller:id/permission_allow_button
+Step 9: Clear Phone Number Text Field  - Found by ResourceId  - com.grasshopper.dialer:id/phone_input
+Step 10: Enter +16179906284 as trusted numbers - Text entered: +16179906284, Found by ResourceId: com.grasshopper.dialer:id/phone_input
+Step 11: Click next from Enter your phone number  - Object found by ResourceId: com.grasshopper.dialer:id/action_next
+Step 12: Verify Yes Button  - Object found by ResourceId: android:id/button1
+Step 13: Verify Permissions to manage phone calls  - Value expected: Allow Grasshopper to access your contacts? matches Value found: Allow Grasshopper to access your contacts? on ResourceId: com.android.packageinstaller:id/permission_message
+Step 14: Select allow permission to manage phone calls  - Object found by ResourceId: com.android.packageinstaller:id/permission_allow_button
+Step 15: Click OK button - Object found by ResourceId: android:id/button1
+Step 16: Select allow permission to manage phone calls  - Object found by ResourceId: com.android.packageinstaller:id/permission_allow_button
+Step 17: Tap once to remove the first tour banner  - Found by ResourceId  - com.grasshopper.dialer:id/toolbar
+Step 18: Click on Settings  - Object found by Text: Settings
+Step 19: Click Access Number  - Object found by Text: Access Number
+Step 20: Verify Access Number Title  - Object found by Text: Access Number
+Step 21: Turn off Use +44 switch  - Object found by ResourceId: com.grasshopper.dialer:id/plus_one_switch_button
+Step 22: Verify Use +44 text is turned OFF - Value expected: OFF matches Value found: OFF on ResourceId: com.grasshopper.dialer:id/plus_one_switch_button
+Step 23: Verify Use +44 text Switch is Not Checked  - Value expected: FALSE matches Value found: OFF on ResourceId: android.widget.Switch
+Step 24: Click go back button  - Object found by Class: android.widget.ImageButton
+Step 25: HOME - Button has been pressed
+Step 26: Click Native phone dialer  - Object found by Content Description: Phone
+Step 27: Time to start calling: Mon Mar 20 16:14:02 EDT 2017
+Step 28: LongPress on object found by ResourceID: com.htc.contacts:id/zero
+Step 29: Click 2  - Object found by ResourceId: com.htc.contacts:id/four
+Step 30: Click 2  - Object found by ResourceId: com.htc.contacts:id/four
+Step 31: Click 2  - Object found by ResourceId: com.htc.contacts:id/two
+Step 32: Click 0  - Object found by ResourceId: com.htc.contacts:id/zero
+Step 33: Click 2  - Object found by ResourceId: com.htc.contacts:id/three
+Step 34: Click 5  - Object found by ResourceId: com.htc.contacts:id/eight
+Step 35: Click 0  - Object found by ResourceId: com.htc.contacts:id/six
+Step 36: Click 5  - Object found by ResourceId: com.htc.contacts:id/eight
+Step 37: Click 1  - Object found by ResourceId: com.htc.contacts:id/six
+Step 38: Click 0  - Object found by ResourceId: com.htc.contacts:id/three
+Step 39: Click 4  - Object found by ResourceId: com.htc.contacts:id/two
+Step 40: Click 2  - Object found by ResourceId: com.htc.contacts:id/one
+Step 41: Click 2  - Object found by ResourceId: com.htc.contacts:id/center_button
+Step 42:  Wait for: 9 seconds
+Step 43: Click 2  - Object found by ResourceId: com.android.phone:id/cmd_bar_imgbtn_1
+Step 44:  Wait for: 5 seconds
+Step 45: Click 0 to reach Extension 0  - Object found by ResourceId: com.android.phone:id/zero
+Step 46:  Wait for: 8 seconds
+Step 47: Press * to go to voicemail  - Object found by ResourceId: com.android.phone:id/img_1x1
+Step 48:  Wait for: 10 seconds
+Step 49: End Call  - Object found by ResourceId: com.android.phone:id/cmd_bar_btn_1
+Step 50:  Wait for: 10 seconds
+Step 51: HOME - Button has been pressed
+Step 52: Click All apps  - Object found by Content Description: All apps
+Step 53: Search and start Grasshopper app  - Object found by Text: Grasshopper
+Step 54:  Wait for: 15 seconds
+Step 55: Click on Recent  - Object found by Text: Recent
+Step 56:  Wait for: 15 seconds
+Step 57: Click on Inbox  - Object found by Text: Inbox
+Step 58:  Wait for: 8 seconds
+Step 59: Verify the caller ID on the Voicemail  - Object found by Text: +1 617-990-6284
+Step 60: ***FAILED to - Verify Extension 0 : Object not found due Invalid Text: Ext 0 - Default Extension
+Screenshot on Error: This error was found in this View: /Users/ewong/IdeaProjects/ghandroidapp/Screenshots_on_error/UK_Test_4_Voicemail_Navigation_Bar_and_Left_Swipe_Step_60_Verify Extension 0 .jpg
+Step 1: UK_Test_5_Voicemail_Details
+Step 2: Enter user name  - Text entered: ewong@globalsqemail.com, Found by ResourceId: com.grasshopper.dialer:id/email_input
+Step 3: Enter valid password 1  - Text entered: Testing123, Found by ResourceId: com.grasshopper.dialer:id/password_input
+Step 4: Click Login Button  - Object found by ResourceId: com.grasshopper.dialer:id/sign_in
+Step 5: Verify Select Account message  - Value expected: please select the account you want to sign into: matches Value found: please select the account you want to sign into: on ResourceId: android:id/message
+Step 6: Select UK Account  - Object found by ResourceId: android:id/button2
+Step 7:  Wait for: 3 seconds
+Step 8: Select allow permission to manage phone calls  - Object found by ResourceId: com.android.packageinstaller:id/permission_allow_button
+Step 9: Clear Phone Number Text Field  - Found by ResourceId  - com.grasshopper.dialer:id/phone_input
+Step 10: Enter +16179906284 as trusted numbers - Text entered: +16179906284, Found by ResourceId: com.grasshopper.dialer:id/phone_input
+Step 11: Click next from Enter your phone number  - Object found by ResourceId: com.grasshopper.dialer:id/action_next
+Step 12: Verify Yes Button  - Object found by ResourceId: android:id/button1
+Step 13: Verify Permissions to manage phone calls  - Value expected: Allow Grasshopper to access your contacts? matches Value found: Allow Grasshopper to access your contacts? on ResourceId: com.android.packageinstaller:id/permission_message
+Step 14: Select allow permission to manage phone calls  - Object found by ResourceId: com.android.packageinstaller:id/permission_allow_button
+Step 15: Click OK button - Object found by ResourceId: android:id/button1
+Step 16: Select allow permission to manage phone calls  - Object found by ResourceId: com.android.packageinstaller:id/permission_allow_button
+Step 17: Tap once to remove the first tour banner  - Found by ResourceId  - com.grasshopper.dialer:id/toolbar
+Step 18: Click on Settings  - Object found by Text: Settings
+Step 19: Click Access Number  - Object found by Text: Access Number
+Step 20: Verify Access Number Title  - Object found by Text: Access Number
+Step 21: Turn off Use +44 switch  - Object found by ResourceId: com.grasshopper.dialer:id/plus_one_switch_button
+Step 22: Verify Use +44 text is turned OFF - Value expected: OFF matches Value found: OFF on ResourceId: com.grasshopper.dialer:id/plus_one_switch_button
+Step 23: Verify Use +44 text Switch is Not Checked  - Value expected: FALSE matches Value found: OFF on ResourceId: android.widget.Switch
+Step 24: Click go back button  - Object found by Class: android.widget.ImageButton
+Step 25: HOME - Button has been pressed
+Step 26: Click Native phone dialer  - Object found by Content Description: Phone
+Step 27: Initial Time: Mon Mar 20 16:16:56 EDT 2017
+Step 28: Waiting time before calling: 5 Seconds
+Step 29: Time to start calling: Mon Mar 20 16:17:01 EDT 2017
+Step 30: LongPress on object found by ResourceID: com.htc.contacts:id/zero
+Step 31: Click 2  - Object found by ResourceId: com.htc.contacts:id/four
+Step 32: Click 2  - Object found by ResourceId: com.htc.contacts:id/four
+Step 33: Click 2  - Object found by ResourceId: com.htc.contacts:id/two
+Step 34: Click 0  - Object found by ResourceId: com.htc.contacts:id/zero
+Step 35: Click 2  - Object found by ResourceId: com.htc.contacts:id/three
+Step 36: Click 5  - Object found by ResourceId: com.htc.contacts:id/eight
+Step 37: Click 0  - Object found by ResourceId: com.htc.contacts:id/six
+Step 38: Click 5  - Object found by ResourceId: com.htc.contacts:id/eight
+Step 39: Click 1  - Object found by ResourceId: com.htc.contacts:id/six
+Step 40: Click 0  - Object found by ResourceId: com.htc.contacts:id/three
+Step 41: Click 4  - Object found by ResourceId: com.htc.contacts:id/two
+Step 42: Click 2  - Object found by ResourceId: com.htc.contacts:id/one
+Step 43: Click 2  - Object found by ResourceId: com.htc.contacts:id/center_button
+Step 44:  Wait for: 9 seconds
+Step 45: Click 2  - Object found by ResourceId: com.android.phone:id/cmd_bar_imgbtn_1
+Step 46:  Wait for: 5 seconds
+Step 47: Click 0 to reach Extension 0  - Object found by ResourceId: com.android.phone:id/zero
+Step 48:  Wait for: 8 seconds
+Step 49: Press * to go to voicemail  - Object found by ResourceId: com.android.phone:id/img_1x1
+Step 50:  Wait for: 10 seconds
+Step 51: End Call  - Object found by ResourceId: com.android.phone:id/cmd_bar_btn_1
+Step 52:  Wait for: 10 seconds
+Step 53: HOME - Button has been pressed
+Step 54: Click All apps  - Object found by Content Description: All apps
+Step 55: Search and start Grasshopper app  - Object found by Text: Grasshopper
+Step 56:  Wait for: 15 seconds
+Step 57: Click on Recent  - Object found by Text: Recent
+Step 58:  Wait for: 15 seconds
+Step 59: Click on Inbox  - Object found by Text: Inbox
+Step 60:  Wait for: 8 seconds
+Step 61: Verify the caller ID on the Voicemail  - Object found by Text: +1 617-990-6284
+Step 62: ***FAILED to - Verify Extension 0 : Object not found due Invalid Text: Ext 0 - Default Extension
+Screenshot on Error: This error was found in this View: /Users/ewong/IdeaProjects/ghandroidapp/Screenshots_on_error/UK_Test_5_Voicemail_Details_Step_62_Verify Extension 0 .jpg
+Step 1: UK_Test_6_Missed_Call_and_Voicemail_Push_Notification
+Step 2: Enter user name  - Text entered: ewong@globalsqemail.com, Found by ResourceId: com.grasshopper.dialer:id/email_input
+Step 3: Enter valid password 1  - Text entered: Testing123, Found by ResourceId: com.grasshopper.dialer:id/password_input
+Step 4: Click Login Button  - Object found by ResourceId: com.grasshopper.dialer:id/sign_in
+Step 5: Verify Select Account message  - Value expected: please select the account you want to sign into: matches Value found: please select the account you want to sign into: on ResourceId: android:id/message
+Step 6: Select UK Account  - Object found by ResourceId: android:id/button2
+Step 7:  Wait for: 3 seconds
+Step 8: Select allow permission to manage phone calls  - Object found by ResourceId: com.android.packageinstaller:id/permission_allow_button
+Step 9: Clear Phone Number Text Field  - Found by ResourceId  - com.grasshopper.dialer:id/phone_input
+Step 10: Enter +16179906284 as trusted numbers - Text entered: +16179906284, Found by ResourceId: com.grasshopper.dialer:id/phone_input
+Step 11: Click next from Enter your phone number  - Object found by ResourceId: com.grasshopper.dialer:id/action_next
+Step 12: Verify Yes Button  - Object found by ResourceId: android:id/button1
+Step 13: Verify Permissions to manage phone calls  - Value expected: Allow Grasshopper to access your contacts? matches Value found: Allow Grasshopper to access your contacts? on ResourceId: com.android.packageinstaller:id/permission_message
+Step 14: Select allow permission to manage phone calls  - Object found by ResourceId: com.android.packageinstaller:id/permission_allow_button
+Step 15: Click OK button - Object found by ResourceId: android:id/button1
+Step 16: Select allow permission to manage phone calls  - Object found by ResourceId: com.android.packageinstaller:id/permission_allow_button
+Step 17: Tap once to remove the first tour banner  - Found by ResourceId  - com.grasshopper.dialer:id/toolbar
+Step 18: Click on Settings  - Object found by Text: Settings
+Step 19: Click on Sync &amp; Notifications  - Object found by Text: Sync &amp; Notification Settings
+Step 20: Verify Title Sync &amp; Notification Settings is displayed  - Object found by Text: Sync &amp; Notification Settings
+Step 21: Verify Title: voicemails, faxes and missed calls  - Value expected: voicemails, faxes and missed calls matches Value found: voicemails, faxes and missed calls on ResourceId: com.grasshopper.dialer:id/title
+Step 22: Scroll until finding: Ext 0  - Object found by Text: Ext 0
+Step 23: Verify Ext 0 Checkbox Show in app is checked  - Value expected: TRUE matches Value found:  on ResourceId: android.widget.CheckBox
+Step 24: Verify Ext 0 Checkbox Missed Calls is unchecked  - Value expected: FALSE matches Value found:  on ResourceId: android.widget.CheckBox
+Step 25: Verify Ext 0 Checkbox Messages is unchecked  - Value expected: FALSE matches Value found:  on ResourceId: android.widget.CheckBox
+Step 26: Click Checkbox for missed calls push notifications  - Object found by Class: android.widget.CheckBox
+Step 27: Click Checkbox for voicemails push notifications  - Object found by Class: android.widget.CheckBox
+Step 28: Verify Ext 0 Checkbox Show in app is checked  - Value expected: TRUE matches Value found:  on ResourceId: android.widget.CheckBox
+Step 29: Verify Ext 0 Checkbox Show in app is checked  - Value expected: TRUE matches Value found:  on ResourceId: android.widget.CheckBox
+Step 30: Click Save button  - Object found by ResourceId: com.grasshopper.dialer:id/save
+Step 31:  Wait for: 3 seconds
+Step 32: Click Access Number  - Object found by Text: Access Number
+Step 33: Verify Access Number Title  - Object found by Text: Access Number
+Step 34: Turn off Use +44 switch  - Object found by ResourceId: com.grasshopper.dialer:id/plus_one_switch_button
+Step 35: Verify Use +44 text is turned OFF - Value expected: OFF matches Value found: OFF on ResourceId: com.grasshopper.dialer:id/plus_one_switch_button
+Step 36: Verify Use +44 text Switch is Not Checked  - Value expected: FALSE matches Value found: OFF on ResourceId: android.widget.Switch
+Step 37: Click go back button  - Object found by Class: android.widget.ImageButton
+Step 38: HOME - Button has been pressed
+Step 39:  Wait for: 40 seconds
+Step 40: Click Native phone dialer  - Object found by Content Description: Phone
+Step 41: Time to start calling: Mon Mar 20 16:21:05 EDT 2017
+Step 42: LongPress on object found by ResourceID: com.htc.contacts:id/zero
+Step 43: Click 2  - Object found by ResourceId: com.htc.contacts:id/four
+Step 44: Click 2  - Object found by ResourceId: com.htc.contacts:id/four
+Step 45: Click 2  - Object found by ResourceId: com.htc.contacts:id/two
+Step 46: Click 0  - Object found by ResourceId: com.htc.contacts:id/zero
+Step 47: Click 2  - Object found by ResourceId: com.htc.contacts:id/three
+Step 48: Click 5  - Object found by ResourceId: com.htc.contacts:id/eight
+Step 49: Click 0  - Object found by ResourceId: com.htc.contacts:id/six
+Step 50: Click 5  - Object found by ResourceId: com.htc.contacts:id/eight
+Step 51: Click 1  - Object found by ResourceId: com.htc.contacts:id/six
+Step 52: Click 0  - Object found by ResourceId: com.htc.contacts:id/three
+Step 53: Click 4  - Object found by ResourceId: com.htc.contacts:id/two
+Step 54: Click 2  - Object found by ResourceId: com.htc.contacts:id/one
+Step 55: Click 2  - Object found by ResourceId: com.htc.contacts:id/center_button
+Step 56:  Wait for: 9 seconds
+Step 57: Click 2  - Object found by ResourceId: com.android.phone:id/cmd_bar_imgbtn_1
+Step 58:  Wait for: 5 seconds
+Step 59: Click 0 to reach Extension 0  - Object found by ResourceId: com.android.phone:id/zero
+Step 60:  Wait for: 8 seconds
+Step 61: End Call  - Object found by ResourceId: com.android.phone:id/cmd_bar_btn_1
+Step 62:  Wait for: 40 seconds
+Step 63: Swipe - to see Push Notifications
+Step 64: Verify Grasshopper  - Object found by Text: Grasshopper
+Step 65: Verify Missed call push notification - Object found by Text: Missed call from +1 617-990-6284
+Step 66:  Wait for: 8 seconds
+Step 67: ***FAILED to - Verify Caller ID : Object not found due Invalid Text: +1 617-990-6284
+Screenshot on Error: This error was found in this View: /Users/ewong/IdeaProjects/ghandroidapp/Screenshots_on_error/UK_Test_6_Missed_Call_and_Voicemail_Push_Notification_Step_67_Verify Caller ID .jpg
+</pre>
+</span>
+</div>
+<div id="tab3" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>Mar 20, 2017 4:04:06 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Attempting bi-dialect session, assuming Postel's Law holds true on the remote end
+Mar 20, 2017 4:04:06 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Falling back to original OSS JSON Wire Protocol.
+Mar 20, 2017 4:04:35 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+Mar 20, 2017 4:07:07 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Attempting bi-dialect session, assuming Postel's Law holds true on the remote end
+Mar 20, 2017 4:07:07 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Falling back to original OSS JSON Wire Protocol.
+Mar 20, 2017 4:07:16 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+Mar 20, 2017 4:09:49 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Attempting bi-dialect session, assuming Postel's Law holds true on the remote end
+Mar 20, 2017 4:09:49 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Falling back to original OSS JSON Wire Protocol.
+Mar 20, 2017 4:09:59 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+Mar 20, 2017 4:12:47 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Attempting bi-dialect session, assuming Postel's Law holds true on the remote end
+Mar 20, 2017 4:12:47 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Falling back to original OSS JSON Wire Protocol.
+Mar 20, 2017 4:13:14 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+Mar 20, 2017 4:15:59 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Attempting bi-dialect session, assuming Postel's Law holds true on the remote end
+Mar 20, 2017 4:15:59 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Falling back to original OSS JSON Wire Protocol.
+Mar 20, 2017 4:16:09 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+Mar 20, 2017 4:18:56 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Attempting bi-dialect session, assuming Postel's Law holds true on the remote end
+Mar 20, 2017 4:18:56 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Falling back to original OSS JSON Wire Protocol.
+Mar 20, 2017 4:19:10 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 3.3</a> at Mar 20, 2017 4:45:48 PM</p>
+</div>
+</div>
+</body>
+</html>
