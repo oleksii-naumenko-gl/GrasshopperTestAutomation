@@ -82,20 +82,31 @@ public class CommonSteps {
         driver.swipe(Math.round((size.getWidth()*55)/100),1,Math.round((size.getWidth()*55)/100),Math.round((size.getHeight()*72)/100),3000);
         LogMessage("swipe - to see Push Notifications");
     }
-    public void ScrollToTextClick(String stepDescription,String textToFind){try {
-        driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().text(\"" + textToFind + "\"))"));
-        WebElement x = driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().text(\""+textToFind+"\")"));
-        assertTrue(stepDescription+": Object not found - by Text - "+textToFind,x.isDisplayed());
-        x.click();
-        LogMessage(stepDescription + " - Object found by Text: " + textToFind);
+
+    public void ScrollToTextClick(String stepDescription,String textToFind){
+
+        try
+        {
+            driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().text(\"" + textToFind + "\"))"));
+            WebElement x = driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().text(\""+textToFind+"\")"));
+            assertTrue(stepDescription+": Object not found - by Text - "+textToFind,x.isDisplayed());
+            x.click();
+            LogMessage(stepDescription + " - Object found by Text: " + textToFind);
+        }
+
+        catch (Exception e){
+            //screenshotOnError(stepDescription);
+            LogMessage("***FAILED to - "+stepDescription+": Object not found due Invalid Text: "+textToFind);
+            ScreenshotOnError(stepDescription);
+            throw e;
+        }
     }
-    catch (Exception e){
-        //screenshotOnError(stepDescription);
-        LogMessage("***FAILED to - "+stepDescription+": Object not found due Invalid Text: "+textToFind);
-        ScreenshotOnError(stepDescription);
-        throw e;
+
+    // TODO
+    public void ScrollToAppClick(String stepDescription, String appToFind) {
+
     }
-    }
+
     public void ScrollUntilText(String stepDescription,String textToFind){
         try {
             driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().text(\"" + textToFind + "\"))"));
@@ -397,6 +408,7 @@ public class CommonSteps {
             throw e;
         }
     }
+
     public void ClickByName(String stepDescription, String findName){
         try {
             WebElement x = driver.findElementByName(findName);
@@ -680,9 +692,19 @@ public class CommonSteps {
 
         ClickByText("Selecting Default extension", DefaultUser.extensions[0].number, 0);
 
-        Thread.sleep(6000);
+        Thread.sleep(3000);
 
         ClickById("Click OK button","android:id/button1");
+
+        Thread.sleep(6000);
+
+        // TODO: login difference for beta load build
+//        ClickById("Accepting WiFi message", "com.grasshopper.dialer:id/maybe_later");
+//        ClickById("Accepting WiFi message", "com.grasshopper.dialer:id/maybe_later");
+//
+//        Thread.sleep(6000);
+
+
         TapInTheMiddle("Tap once to remove the first tour banner ","com.grasshopper.dialer:id/toolbar");
         TapInTheMiddle("Tap second time to remove the second tour banner ","com.grasshopper.dialer:id/toolbar");
         TapInTheMiddle("Tap third time to remove the third tour banner ","com.grasshopper.dialer:id/toolbar");
@@ -1016,8 +1038,27 @@ public class CommonSteps {
     public void performManualUpdate(){
 
 
-
     }
+
+    public CallDetails getLastCallDetails() throws InterruptedException {
+
+        List<WebElement> list = driver.findElements(By.id("com.grasshopper.dialer:id/swipe"));
+        WebElement firstCall = list.get(0);
+
+        WebElement fromNumber = firstCall.findElement(MobileBy.AndroidUIAutomator("new UiSelector().resourceId(\"" + "com.grasshopper.dialer:id/from" + "\")"));
+        WebElement extension = firstCall.findElement(MobileBy.AndroidUIAutomator("new UiSelector().resourceId(\"" + "com.grasshopper.dialer:id/extension_name" + "\")"));
+        WebElement timestamp = firstCall.findElement(MobileBy.AndroidUIAutomator("new UiSelector().resourceId(\"" + "com.grasshopper.dialer:id/received_time" + "\")"));
+
+        return new CallDetails(fromNumber.getText(), timestamp.getText());
+
+        // get
+        // parent com.grasshopper.dialer:id/history_list
+        // child com.grasshopper.dialer:id/swipe with index from 0 to 5 depending on phone
+        // it has com.grasshopper.dialer:id/from with number
+        // com.grasshopper.dialer:id/extension_name with extension to!!!
+        // com.grasshopper.dialer:id/received_time with timestamp
+    }
+
 
 }
 

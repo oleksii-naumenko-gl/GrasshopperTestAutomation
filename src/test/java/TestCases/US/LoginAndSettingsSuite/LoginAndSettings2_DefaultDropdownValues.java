@@ -16,12 +16,11 @@ public class LoginAndSettings2_DefaultDropdownValues extends BaseTestCase {
     public void Preconditions(){
         this.Setup();
     }
-    {}
 
     @Test
     public void LoginAndSettings2_DefaultDropdownValues() throws InterruptedException {
 
-        steps.LogMessage("Test 2 ----------------");
+        steps.LogMessage("Test 2");
 
         steps.login();
 

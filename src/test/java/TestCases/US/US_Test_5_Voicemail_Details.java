@@ -28,7 +28,7 @@ public class US_Test_5_Voicemail_Details extends BaseTestCase {
 
 //        String missCall = steps.leaveVoicemailMoto(CommonVars.myGhNumber, 0);
 
-        String missCall = "01:19 PM";
+        String missCall = "06:07 PM";
 
         Thread.sleep(CommonVars.Timeouts.longActionTimeout);
 

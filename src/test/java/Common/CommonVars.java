@@ -22,6 +22,9 @@ public class CommonVars {
 //    public static String incomingCall = "+380 67 718 1238";
     public static String incomingCall = "(617) 221-3663";
 
+    public static String incomingNonFormattedCall = "+16172213663";
+
+
     public static String validNonAdminUser = "basicuser@globalsqemail.com";
 
     public static String invalidUsername = "ewonguk@globalsqemail.com";

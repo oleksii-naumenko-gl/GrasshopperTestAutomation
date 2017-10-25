@@ -13,7 +13,7 @@ public class AbstractTest {
     @Before
     public void connect() throws MalformedURLException {
 
-        this.driver = AppiumDriverBuilder.SetupEmulator();
+        this.driver = AppiumDriverBuilder.setup();
 
         app = new GrasshopperApp(driver);
     }

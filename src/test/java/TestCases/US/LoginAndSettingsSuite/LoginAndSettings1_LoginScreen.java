@@ -8,9 +8,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-/**
- * todo: put design here
- */
 public class LoginAndSettings1_LoginScreen extends BaseTestCase {
 
     @Before
@@ -51,9 +48,6 @@ public class LoginAndSettings1_LoginScreen extends BaseTestCase {
 
         steps.WaitingT(CommonVars.Timeouts.defaultActionTimeout);
         steps.VerifyTextById("Verify Enter Your Mobile Number text", "Enter Your Mobile Number", "com.grasshopper.dialer:id/title");
-
-        // number doesn't get autopopulated on Galaxy phone
-//        steps.verifyTextById("Verify Phone Number gets auto populated ","(617) 990-6284","com.grasshopper.dialer:id/phone_input");
 
         steps.ClearTextFieldById("Cleaning number input", "com.grasshopper.dialer:id/phone_input");
         steps.EnterTextById("Enter correct phone number ", "6179906284", "com.grasshopper.dialer:id/phone_input");
@@ -97,13 +91,12 @@ public class LoginAndSettings1_LoginScreen extends BaseTestCase {
         steps.VerifyTextById("Verify  OK button", "OK", "android:id/button1");
         steps.ClickById("Click OK button", "android:id/button1");
 
-        steps.TapInTheMiddle("Tap once to remove the first tour banner ", "com.grasshopper.dialer:id/toolbar");
-        steps.TapInTheMiddle("Tap second time to remove the second tour banner ", "com.grasshopper.dialer:id/toolbar");
-        steps.TapInTheMiddle("Tap third time to remove the third tour banner ", "com.grasshopper.dialer:id/toolbar");
+        if (isWifiBuild){
+            steps.ClickById("Accepting WiFi message", "com.grasshopper.dialer:id/enable_wifi_calling");
 
-        Thread.sleep(5000);
+        }
+
     }
-
 
     @After
     public void PostConditions(){

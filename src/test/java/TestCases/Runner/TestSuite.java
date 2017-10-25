@@ -20,10 +20,10 @@ import org.junit.runners.Suite;
 //        LoginAndSettings2_DefaultDropdownValues.class,
 //        LoginAndSettings3_BaseSMS.class,
 //        LoginAndSettings4_SettingsScreen.class,
-//        US_Test_2_Missed_Call_Left_Swipe.class,
-//        US_Test_3_Missed_Call_Details.class,
-        US_Test_4_Voicemail_Navigation_Bar_and_Left_Swipe.class,
-        US_Test_5_Voicemail_Details.class
+        US_Test_2_Missed_Call_Left_Swipe.class,
+        US_Test_3_Missed_Call_Details.class,
+//        US_Test_4_Voicemail_Navigation_Bar_and_Left_Swipe.class,
+//        US_Test_5_Voicemail_Details.class
 
 //        Texts1_DialogueCreationAndLeftSwipe.class,
 //        Texts2_PushNotifications.class

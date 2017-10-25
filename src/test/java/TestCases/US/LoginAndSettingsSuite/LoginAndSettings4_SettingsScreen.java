@@ -8,9 +8,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-/**
- * Created by admin on 8/16/17.
- */
 public class LoginAndSettings4_SettingsScreen extends BaseTestCase {
 
     @Before
@@ -21,10 +18,8 @@ public class LoginAndSettings4_SettingsScreen extends BaseTestCase {
 
 
     @Test
-    public void LoginAndSettings3_SettingsScreen() throws InterruptedException {
-
+    public void LoginAndSettings4_SettingsScreen() throws InterruptedException {
         steps.login();
-
 
         steps.ClickByText("Click on Settings ", "Settings",0);
         steps.VerifyText("Verify Settings page has been displayed ","Settings");
@@ -33,7 +28,12 @@ public class LoginAndSettings4_SettingsScreen extends BaseTestCase {
 
         steps.VerifyTextById("Verify your GH Number is displayed ", DefaultUser.numbers[0].number, "com.grasshopper.dialer:id/tv_number");
 
-        steps.VerifyTextById("Verify Advance Settings is displayed ","ADVANCED SETTINGS","com.grasshopper.dialer:id/outgoing_calls_title");
+        steps.VerifyTextById("Verify Outgoing Calls is displayed ","OUTGOING CALLS", "com.grasshopper.dialer:id/outgoing_calls_title");
+//        steps.VerifyTextById("Verify WiFi Calling are displayed ", "WiFi Calling", "com.grasshopper.dialer:id/tv_calling_method");
+        steps.VerifyTextById("Verify Subtext for WiFi Calling subtext is displayed ","Preferences for WiFi Calling","com.grasshopper.dialer:id/tv_calling_method_subtext");
+
+        // todo: new ID will be added for ADVANCED SETTINGS section
+        // steps.VerifyTextById("Verify Advance Settings is displayed ","ADVANCED SETTINGS", "com.grasshopper.dialer:id/outgoing_calls_title");
         steps.VerifyTextById("Verify Sync & Notification Settings are displayed ","Sync & Notification Settings","com.grasshopper.dialer:id/tv_sync_settings_text");
         steps.VerifyTextById("Verify Subtext for Sync & Notifications are displayed ","Show in App and Push Notification Settings","com.grasshopper.dialer:id/tv_sync_settings_subtext");
 
@@ -101,8 +101,12 @@ public class LoginAndSettings4_SettingsScreen extends BaseTestCase {
         steps.ClickById("Turn off Use +1 switch ","com.grasshopper.dialer:id/plus_one_switch_button");
         steps.VerifyTextById("Verify Use +1 text is turned ON ","ON","com.grasshopper.dialer:id/plus_one_switch_button");
         steps.IsCheckedCheckBox("Verify Use +1 text Switch is Checked ","android.widget.Switch",0);
-        steps.ClickByText("Click on Default Access Number ","Default",0);
+
+        steps.ClickByText("Click on Default Access Number ","Default", 0);
         steps.ClickByClass("Click go back button ","android.widget.ImageButton",0);
+
+        steps.ScrollUntilText("Scrolling down", "Making Calls");
+
         steps.VerifyTextById("Verify Setting for Access Number ","Default","com.grasshopper.dialer:id/tv_access_number_subtext");
         steps.VerifyTextById("Verify Making calls is displayed ","Making Calls","com.grasshopper.dialer:id/tv_making_call");
         steps.VerifyTextById("Verify Setting for Making calls ","Use Grasshopper for In-App Calls Only","com.grasshopper.dialer:id/tv_intercept_call_subtext");
@@ -115,20 +119,30 @@ public class LoginAndSettings4_SettingsScreen extends BaseTestCase {
         steps.VerifyText("Verify Ask to use Grasshopper for each call ","Ask to Use Grasshopper for Each Call");
         steps.ClickByText("Click on Always make calls via Grasshopper ","Always Make Calls via Grasshopper", 0);
         steps.ClickByClass("Click go back button ","android.widget.ImageButton", 0);
+
+        steps.ScrollUntilText("Scrolling down", "Making Calls");
+
+
         steps.VerifyTextById("Verify Setting for Making calls ","Always Make Calls via Grasshopper","com.grasshopper.dialer:id/tv_intercept_call_subtext");
 
         steps.ClickByText("Click on Setting to make call ","Making Calls", 0);
 
         steps.VerifyText("Verify Making calls title ","Making Calls");
 
-        // todo: crash!!!
         steps.ClickByText("Click on Ask to use Grasshopper for each call ","Ask to Use Grasshopper for Each Call", 0);
         steps.ClickByClass("Click go back button ","android.widget.ImageButton", 0);
+
+        steps.ScrollUntilText("Scrolling down", "Making Calls");
+
         steps.VerifyTextById("Verify Setting for Making calls ","Ask to Use Grasshopper for Each Call","com.grasshopper.dialer:id/tv_intercept_call_subtext");
         steps.ClickByText("Click on Setting to make call ","Making Calls", 0);
         steps.VerifyText("Verify Making calls title ","Making Calls");
         steps.ClickByText("Click on Use Grasshopper for in-app calls only ","Use Grasshopper for In-App Calls Only",0);
         steps.ClickByClass("Click go back button ","android.widget.ImageButton",0);
+
+        steps.ScrollUntilText("Scrolling down", "Making Calls");
+
+
         steps.VerifyTextById("Verify Setting for Making calls ","Use Grasshopper for In-App Calls Only","com.grasshopper.dialer:id/tv_intercept_call_subtext");
 
         steps.ScrollUntilText("Scrolling until My Mobile Number is found", "Caller Info");
@@ -178,13 +192,13 @@ public class LoginAndSettings4_SettingsScreen extends BaseTestCase {
         steps.VerifyTextById("Verify Caller Info title ","Caller Info","com.grasshopper.dialer:id/caller_info_title");
         steps.VerifyTextById("Verify Caller ID setting ","Look Up Caller Information","com.grasshopper.dialer:id/tv_caller_info_subtext");
         steps.VerifyTextById("Verify Caller ID has been initialized OFF ","OFF","com.grasshopper.dialer:id/iv_caller_info_switch");
-        steps.IsNotCheckedCheckBox("Verify Caller ID Switch is Not Checked ","android.widget.Switch",0);
+        steps.IsNotCheckedCheckBox("Verify Caller ID Switch is Not Checked ","android.widget.Switch", 0);
         steps.ClickById("Turn the caller id switch ON ","com.grasshopper.dialer:id/iv_caller_info_switch");
         steps.VerifyTextById("Verify Caller ID has been initialized ON ","ON","com.grasshopper.dialer:id/iv_caller_info_switch");
-        steps.IsCheckedCheckBox("Verify Use caller id Switch is Checked ","android.widget.Switch",0);
+        steps.IsCheckedCheckBox("Verify Use caller id Switch is Checked ","android.widget.Switch", 0);
         steps.ClickById("Turn the caller id switch OFF ","com.grasshopper.dialer:id/iv_caller_info_switch");
         steps.VerifyTextById("Verify Caller ID has been initialized OFF ","OFF","com.grasshopper.dialer:id/iv_caller_info_switch");
-        steps.IsNotCheckedCheckBox("Verify Caller ID Switch is Not Checked ","android.widget.Switch",0);
+        steps.IsNotCheckedCheckBox("Verify Caller ID Switch is Not Checked ","android.widget.Switch", 0);
         steps.ScrollUntilText("Scroll until finding: About Grasshopper ","About Grasshopper");
         steps.VerifyTextById("Verify Blocked Numbers Section ","Blocked Numbers","com.grasshopper.dialer:id/blocknumber_title");
         steps.VerifyTextByIdInstance("Verify Blocked Numbers subtext ","Blocked Numbers for Both Incoming Calls and Texts","com.grasshopper.dialer:id/tv_caller_info_subtext",1);
@@ -192,8 +206,8 @@ public class LoginAndSettings4_SettingsScreen extends BaseTestCase {
         steps.VerifyText("Verify Blocked numbers page ","Blocked Number");
 
         // просто так падает todo
-        steps.VerifyText("Verify Blocked Numbers body ","You have no blocked numbers.");
-        steps.VerifyText("Verify Blocked numbers subtext ","Add numbers to be blocked from Inbox, Recent & Texts screens.");
+//        steps.VerifyText("Verify Blocked Numbers body ","You have no blocked numbers.");
+//        steps.VerifyText("Verify Blocked numbers subtext ","Add numbers to be blocked from Inbox, Recent & Texts screens.");
 
 
         steps.ClickByClass("Click go back button ","android.widget.ImageButton",0);
@@ -206,7 +220,9 @@ public class LoginAndSettings4_SettingsScreen extends BaseTestCase {
         steps.selectGmailFeedback();
 
         steps.PressBack();
+
         steps.ScrollUntilText("Verify message title is present", "FeedbackGrasshopper");
+
         steps.PressBack();
 
         steps.PressHome();

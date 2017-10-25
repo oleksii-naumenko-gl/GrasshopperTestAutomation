@@ -40,7 +40,7 @@ public class AppiumDriverBuilder {
     private static void setupBasicCapabilities(DesiredCapabilities capabilities){
         File appDir = new File("/Users/admin/IdeaProjects/GrasshopperAutomation/AT");
 
-        File app = new File(appDir, "test.apk");
+        File app = new File(appDir, "GH_Beta_466.apk");
 
         capabilities.setCapability("device", "Android");
 
