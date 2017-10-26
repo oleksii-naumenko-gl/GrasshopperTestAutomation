@@ -29,7 +29,7 @@ public class CommonSteps {
 
     public Dimension size;
 
-    public Integer timeOutInSecs = 15;
+    public static Integer timeOutInSecs = 15;
 
     public CommonSteps(AndroidDriver driver){
         this.driver = driver;
@@ -481,6 +481,7 @@ public class CommonSteps {
         }
     }
 
+
     public void EnterTextById(String stepDescription,String textToEnter,String findResourceId){
         try {
             WebElement x = driver.findElementById(findResourceId);
@@ -681,9 +682,13 @@ public class CommonSteps {
             WaitingT(7000);
         }
 
+        // Allow permission "To make and manage phone calls"
+        if(isElementIsPresent("com.android.packageinstaller:id/permission_message")) {
+            allowAccessPopUp();
+        }
+
         ClearTextFieldById("Cleaning number input", "com.grasshopper.dialer:id/phone_input");
         EnterTextById("Enter correct phone number ", CommonVars.validAccessPoint, "com.grasshopper.dialer:id/phone_input");
-
 
         ClickById("Click next from Enter your phone number ","com.grasshopper.dialer:id/action_next");
         ClickById("Click Yes Button ","android:id/button1");
@@ -694,22 +699,51 @@ public class CommonSteps {
 
         Thread.sleep(3000);
 
-        ClickById("Click OK button","android:id/button1");
 
-        Thread.sleep(6000);
+        if(isElementIsPresent("com.android.packageinstaller:id/permission_message")){
+            allowAccessPopUp();
+        }
+        Thread.sleep(3000);
+
+
+
+        try {
+            tapByCoordinates("Click OK button in dialog",0, 0);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        Thread.sleep(9000);
+
+        for(int permissionPage = 0; permissionPage<2; permissionPage++) {
+
+            if (isElementIsPresent("com.android.packageinstaller:id/permission_message")) {
+                allowAccessPopUp();
+            }
+        }
+
 
         // TODO: login difference for beta load build
-//        ClickById("Accepting WiFi message", "com.grasshopper.dialer:id/maybe_later");
+        ClickById("Accepting WiFi message", "com.grasshopper.dialer:id/maybe_later");
 //        ClickById("Accepting WiFi message", "com.grasshopper.dialer:id/maybe_later");
 //
-//        Thread.sleep(6000);
+        Thread.sleep(6000);
 
+        //Accepting cellular data dialog
+    //    ClickById("Accepting Cellular Data dialog", "android:id/button1");
+
+    //    Thread.sleep(6000);
 
         TapInTheMiddle("Tap once to remove the first tour banner ","com.grasshopper.dialer:id/toolbar");
         TapInTheMiddle("Tap second time to remove the second tour banner ","com.grasshopper.dialer:id/toolbar");
         TapInTheMiddle("Tap third time to remove the third tour banner ","com.grasshopper.dialer:id/toolbar");
     }
-    
+
+    public void allowAccessPopUp() {
+        ClickByXpath("Click Allow button", "//android.widget.Button[@text='ALLOW']");
+    }
+
     /*
     Dails specified number and extension on Motorolla.
      */
@@ -1058,7 +1092,33 @@ public class CommonSteps {
         // com.grasshopper.dialer:id/extension_name with extension to!!!
         // com.grasshopper.dialer:id/received_time with timestamp
     }
+    /*
+        Returns if element is present on the screen based on the Resource Id.
+     */
+    public static boolean isElementIsPresent(String id){
 
+        try {
+            WebElement element = (new WebDriverWait(driver, timeOutInSecs))
+                    .until(ExpectedConditions.presenceOfElementLocated(By.id(id)));
+        }
+        catch (Exception x){
+            LogMessage("Cannot find an element based on id " + id);
+            return false;
+        }
+
+        return true;
+    }
+
+    public void tapByCoordinates(String stepDescription, int x, int y) throws IOException {
+        try {
+            Process p = Runtime.getRuntime().exec("adb shell input tap "+ x +" "+ y);
+            LogMessage(stepDescription+" - Found by coordinates: "+x+", "+y);
+        } catch (Exception e) {
+            LogMessage("***FAILED to - "+stepDescription+": Object not found due Invalid coordinates: "+x+", "+y);
+            ScreenshotOnError(stepDescription);
+            throw e;
+        }
+
+    }
 
 }
-
