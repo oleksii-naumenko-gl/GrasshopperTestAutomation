@@ -4,6 +4,7 @@ import Common.CommonEnums;
 import Common.CommonVars;
 import Common.DefaultUser;
 import TestCases.BaseTestCase;
+import TestCases.Runner.SharedData;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -14,8 +15,6 @@ public class LoginAndSettings4_SettingsScreen extends BaseTestCase {
     public void Preconditions(){
         this.Setup();
     }
-    {}
-
 
     @Test
     public void LoginAndSettings4_SettingsScreen() throws InterruptedException {
@@ -28,12 +27,13 @@ public class LoginAndSettings4_SettingsScreen extends BaseTestCase {
 
         steps.VerifyTextById("Verify your GH Number is displayed ", DefaultUser.numbers[0].number, "com.grasshopper.dialer:id/tv_number");
 
-        steps.VerifyTextById("Verify Outgoing Calls is displayed ","OUTGOING CALLS", "com.grasshopper.dialer:id/outgoing_calls_title");
-//        steps.VerifyTextById("Verify WiFi Calling are displayed ", "WiFi Calling", "com.grasshopper.dialer:id/tv_calling_method");
-        steps.VerifyTextById("Verify Subtext for WiFi Calling subtext is displayed ","Preferences for WiFi Calling","com.grasshopper.dialer:id/tv_calling_method_subtext");
+        if (SharedData.isWifiBuild){
+            steps.VerifyTextById("Verify Outgoing Calls is displayed ","OUTGOING CALLS", "com.grasshopper.dialer:id/outgoing_calls_title");
+            steps.VerifyTextById("Verify WiFi Calling are displayed ", "WiFi Calling", "com.grasshopper.dialer:id/tv_calling_method");
+            steps.VerifyTextById("Verify Subtext for WiFi Calling subtext is displayed ","Preferences for WiFi Calling","com.grasshopper.dialer:id/tv_calling_method_subtext");
+        }
 
-        // todo: new ID will be added for ADVANCED SETTINGS section
-        // steps.VerifyTextById("Verify Advance Settings is displayed ","ADVANCED SETTINGS", "com.grasshopper.dialer:id/outgoing_calls_title");
+        steps.VerifyTextById("Verify Advance Settings is displayed ","ADVANCED SETTINGS", "com.grasshopper.dialer:id/advanced_settings_title");
         steps.VerifyTextById("Verify Sync & Notification Settings are displayed ","Sync & Notification Settings","com.grasshopper.dialer:id/tv_sync_settings_text");
         steps.VerifyTextById("Verify Subtext for Sync & Notifications are displayed ","Show in App and Push Notification Settings","com.grasshopper.dialer:id/tv_sync_settings_subtext");
 
@@ -45,7 +45,6 @@ public class LoginAndSettings4_SettingsScreen extends BaseTestCase {
         steps.VerifyTextByIdInstance("Verify Texting Numbers is displayed ","TEXTING NUMBERS","com.grasshopper.dialer:id/title",0);
         steps.VerifyText("Verify subtext for Texting numbers is displayed ","Choose which number to show in the Texts view and enable push notification for it.");
         steps.VerifyText("Verify Show in App is displayed","Show in App\n" + "& Notify");
-
 
         steps.VerifyTextByIdInstance("Verify All Numbers is displayed ","All Numbers","com.grasshopper.dialer:id/name", 0);
         steps.IsCheckedCheckBox("Verify All Numbers Checkbox is checked ","android.widget.CheckBox", 0);
@@ -122,7 +121,6 @@ public class LoginAndSettings4_SettingsScreen extends BaseTestCase {
 
         steps.ScrollUntilText("Scrolling down", "Making Calls");
 
-
         steps.VerifyTextById("Verify Setting for Making calls ","Always Make Calls via Grasshopper","com.grasshopper.dialer:id/tv_intercept_call_subtext");
 
         steps.ClickByText("Click on Setting to make call ","Making Calls", 0);
@@ -141,7 +139,6 @@ public class LoginAndSettings4_SettingsScreen extends BaseTestCase {
         steps.ClickByClass("Click go back button ","android.widget.ImageButton",0);
 
         steps.ScrollUntilText("Scrolling down", "Making Calls");
-
 
         steps.VerifyTextById("Verify Setting for Making calls ","Use Grasshopper for In-App Calls Only","com.grasshopper.dialer:id/tv_intercept_call_subtext");
 
@@ -185,7 +182,6 @@ public class LoginAndSettings4_SettingsScreen extends BaseTestCase {
 
         steps.ScrollUntilText("Scrolling until My Mobile Number is found", "Caller Info");
 
-
         steps.VerifyText("Verify (617) 990-6284 number ", CommonVars.validAccessPointFormatted);
         steps.ScrollUntilText("Scroll until finding: Blocked Numbers ","Blocked Numbers");
 
@@ -205,11 +201,6 @@ public class LoginAndSettings4_SettingsScreen extends BaseTestCase {
         steps.ClickByText("Click Blocked Numbers","Blocked Numbers",0);
         steps.VerifyText("Verify Blocked numbers page ","Blocked Number");
 
-        // просто так падает todo
-//        steps.VerifyText("Verify Blocked Numbers body ","You have no blocked numbers.");
-//        steps.VerifyText("Verify Blocked numbers subtext ","Add numbers to be blocked from Inbox, Recent & Texts screens.");
-
-
         steps.ClickByClass("Click go back button ","android.widget.ImageButton",0);
         steps.ScrollUntilText("Scroll until finding: About Grasshopper ","About Grasshopper");
         steps.VerifyText("Verify Others title ","Others");
@@ -218,13 +209,9 @@ public class LoginAndSettings4_SettingsScreen extends BaseTestCase {
 
         Thread.sleep(5000);
         steps.selectGmailFeedback();
-
         steps.PressBack();
-
         steps.ScrollUntilText("Verify message title is present", "FeedbackGrasshopper");
-
         steps.PressBack();
-
         steps.PressHome();
 
         Thread.sleep(5000);
