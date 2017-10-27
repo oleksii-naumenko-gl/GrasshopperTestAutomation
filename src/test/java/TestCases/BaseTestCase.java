@@ -17,9 +17,11 @@ public class BaseTestCase extends SharedData {
     public CommonSteps steps;
 
     // getting data from config.properties
+    // todo: move to SharedData class to have accecss across the solution.
     private String path;
     private String phoneAndroidVersion;
     private String appiumServer;
+    private String grasshopperVersion;
 
     /**
      * Downloads build from shared Dropbox folder.
@@ -50,7 +52,7 @@ public class BaseTestCase extends SharedData {
 
         File appDir = new File(path);
 
-        File app = new File(appDir, "462-2.apk");
+        File app = new File(appDir, grasshopperVersion + ".apk");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("device", "Android");
@@ -80,7 +82,7 @@ public class BaseTestCase extends SharedData {
 
         File appDir = new File("/Users/admin/IdeaProjects/GrasshopperAutomation/AT");
 
-        File app = new File(appDir, "461.apk");
+        File app = new File(appDir, grasshopperVersion + ".apk");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("device","Android");
 
@@ -115,6 +117,7 @@ public class BaseTestCase extends SharedData {
             path = properties.getProperty("grasshopper_apk_path");
             phoneAndroidVersion = properties.getProperty("test_android_version");
             appiumServer = properties.getProperty("appium_server_url");
+            grasshopperVersion = properties.getProperty("grasshopper_build_version");
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();

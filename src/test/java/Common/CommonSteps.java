@@ -1,5 +1,6 @@
 package Common;
 
+import TestCases.Runner.SharedData;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
@@ -706,13 +707,11 @@ public class CommonSteps {
         Thread.sleep(3000);
 
 
-
         try {
-            tapByCoordinates("Click OK button in dialog",0, 0);
+            tapByCoordinates("Click OK button in dialog", 50, 50);
         } catch (IOException e) {
             e.printStackTrace();
         }
-
 
         Thread.sleep(9000);
 
@@ -723,17 +722,12 @@ public class CommonSteps {
             }
         }
 
-
-        // TODO: login difference for beta load build
-        ClickById("Accepting WiFi message", "com.grasshopper.dialer:id/maybe_later");
-//        ClickById("Accepting WiFi message", "com.grasshopper.dialer:id/maybe_later");
-//
+        if (SharedData.isWifiBuild){
+            ClickById("Accepting WiFi message", "com.grasshopper.dialer:id/maybe_later");
+            ClickById("Accepting Cellular Data dialog", "android:id/button1");
+        }
         Thread.sleep(6000);
 
-        //Accepting cellular data dialog
-    //    ClickById("Accepting Cellular Data dialog", "android:id/button1");
-
-    //    Thread.sleep(6000);
 
         TapInTheMiddle("Tap once to remove the first tour banner ","com.grasshopper.dialer:id/toolbar");
         TapInTheMiddle("Tap second time to remove the second tour banner ","com.grasshopper.dialer:id/toolbar");
