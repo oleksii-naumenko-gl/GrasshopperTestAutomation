@@ -1,2 +1,3 @@
 # ignoring config properties file
-config.properties
+.gradle/
+/config.properties
