@@ -8,6 +8,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import static Common.Steps.GenericSteps.clickByXpath;
+import static Common.Steps.GenericSteps.isElementIsPresent;
+
 public class LoginAndSettings1_LoginScreen extends BaseTestCase {
 
     @Before
@@ -46,8 +49,20 @@ public class LoginAndSettings1_LoginScreen extends BaseTestCase {
             steps.ClickById("Select US Account ", "android:id/button1");
         }
 
-        steps.WaitingT(CommonVars.Timeouts.defaultActionTimeout);
+
+        steps.WaitingT(CommonVars.Timeouts.longActionTimeout);
+
+        //if (isElementIsPresent("com.android.packageinstaller:id/permission_message")) {
+          try {
+              //clickByXpath("Click Allow button", "//android.widget.Button[@text='ALLOW']");
+              steps.ClickById("", "com.android.packageinstaller:id/permission_allow_button");
+
+          }
+          catch (Exception x){}
+        //}
+
         steps.VerifyTextById("Verify Enter Your Mobile Number text", "Enter Your Mobile Number", "com.grasshopper.dialer:id/title");
+
 
         steps.ClearTextFieldById("Cleaning number input", "com.grasshopper.dialer:id/phone_input");
         steps.EnterTextById("Enter correct phone number ", "6179906284", "com.grasshopper.dialer:id/phone_input");
@@ -86,11 +101,25 @@ public class LoginAndSettings1_LoginScreen extends BaseTestCase {
 
         Thread.sleep(CommonVars.Timeouts.defaultActionTimeout);
 
+        try {
+            //clickByXpath("Click Allow button", "//android.widget.Button[@text='ALLOW']");
+            steps.ClickById("", "com.android.packageinstaller:id/permission_allow_button");
+
+        }
+        catch (Exception x){}
+
         steps.VerifyTextById("Verify Legal Disclaimer pop up ", "Legal Disclaimer", "com.grasshopper.dialer:id/alertTitle");
         steps.VerifyTextById("Verify Content of the Legal Disclaimer pop up ", "The grasshopper app and system is not intended or designed for dialing 911 or any other emergency number. Please use your phone's dialer for these purposes.", "android:id/message");
         steps.VerifyTextById("Verify  OK button", "OK", "android:id/button1");
         steps.ClickById("Click OK button", "android:id/button1");
+        for (int permissionPage = 0; permissionPage < 2; permissionPage++) {
+            try {
+                //clickByXpath("Click Allow button", "//android.widget.Button[@text='ALLOW']");
+                steps.ClickById("", "com.android.packageinstaller:id/permission_allow_button");
 
+            } catch (Exception x) {
+            }
+        }
         if (isWifiBuild){
             steps.ClickById("Accepting WiFi message", "com.grasshopper.dialer:id/enable_wifi_calling");
 

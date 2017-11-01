@@ -203,7 +203,12 @@ public class LoginAndSettings4_SettingsScreen extends BaseTestCase {
 
         steps.ClickByClass("Click go back button ","android.widget.ImageButton",0);
         steps.ScrollUntilText("Scroll until finding: About Grasshopper ","About Grasshopper");
-        steps.VerifyText("Verify Others title ","Others");
+        if(SharedData.phoneAndroidVersion=="7.0"){
+            steps.VerifyText("Verify Others title ", "OTHERS");
+        }
+        if(SharedData.phoneAndroidVersion=="5.0.2") {
+            steps.VerifyText("Verify Others title ", "Others");
+        }
         steps.VerifyText("Verify Others title ","Give Feedback");
         steps.ClickByText("Click on Give feedback ","Give Feedback",0);
 
@@ -215,7 +220,7 @@ public class LoginAndSettings4_SettingsScreen extends BaseTestCase {
         steps.PressHome();
 
         Thread.sleep(5000);
-        steps.ClickByContentDesc("Click All apps ","Apps",0);
+        steps.ClickByText("Click All apps ","Apps",0);
         steps.ScrollToTextClick("Search and start Grasshopper app ","Grasshopper");
         steps.WaitingT(3000);
 
