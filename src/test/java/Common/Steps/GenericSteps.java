@@ -4,9 +4,10 @@ import io.appium.java_client.MobileBy;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidKeyCode;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+//import org.openqa.selenium.By;
+//import org.openqa.selenium.Dimension;
+//import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -231,6 +232,19 @@ public class GenericSteps {
 
             return true;
      }
+    public static boolean isElementIsPresentByXpath(String xPath){
+
+        try {
+            WebElement element = (new WebDriverWait(driver, timeOutInSecs))
+                    .until(ExpectedConditions.presenceOfElementLocated(By.xpath(xPath)));
+        }
+        catch (Exception x){
+            logMessage("Cannot find an element based on xPath " + xPath);
+            return false;
+        }
+
+        return true;
+    }
 
         public static void verifyTextById(String stepDescription, String textToFind, String findResourceId){
             String actualText = "";
