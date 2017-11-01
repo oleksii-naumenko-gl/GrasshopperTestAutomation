@@ -26,22 +26,22 @@ public class BaseTestCase extends SharedData {
     /**
      * Downloads build from shared Dropbox folder.
      */
-    @Deprecated
-    private void downloadBuild(){
-
-        String url="https://www.dropbox.com/s/rsvwsgsoasjhta3/448.apk?dl=0";
-        String filename="462-2.apk";
-
-        try{
-            URL download=new URL(url);
-            ReadableByteChannel rbc= Channels.newChannel(download.openStream());
-            FileOutputStream fileOut = new FileOutputStream(filename);
-            fileOut.getChannel().transferFrom(rbc, 0, 1 << 24);
-            fileOut.flush();
-            fileOut.close();
-            rbc.close();
-        }catch(Exception e){ e.printStackTrace(); }
-    }
+//    @Deprecated
+//    private void downloadBuild(){
+//
+//        String url="https://www.dropbox.com/s/rsvwsgsoasjhta3/448.apk?dl=0";
+//        String filename="462-2.apk";
+//
+//        try{
+//            URL download=new URL(url);
+//            ReadableByteChannel rbc= Channels.newChannel(download.openStream());
+//            FileOutputStream fileOut = new FileOutputStream(filename);
+//            fileOut.getChannel().transferFrom(rbc, 0, 1 << 24);
+//            fileOut.flush();
+//            fileOut.close();
+//            rbc.close();
+//        }catch(Exception e){ e.printStackTrace(); }
+//    }
 
     /**
      * Setups instance of Android Driver, creates instance of common steps.
@@ -80,7 +80,7 @@ public class BaseTestCase extends SharedData {
     public void SetupRestart(){
         getProperties();
 
-        File appDir = new File("/Users/admin/IdeaProjects/GrasshopperAutomation/AT");
+        File appDir = new File(path);
 
         File app = new File(appDir, grasshopperVersion + ".apk");
         DesiredCapabilities capabilities = new DesiredCapabilities();

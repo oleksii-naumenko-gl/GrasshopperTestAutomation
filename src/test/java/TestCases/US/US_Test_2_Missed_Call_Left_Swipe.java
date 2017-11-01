@@ -1,9 +1,6 @@
 package TestCases.US;
 
-import Common.CommonSteps;
-import Common.CommonVars;
-import Common.DefaultUser;
-import Common.Helper;
+import Common.*;
 import TestCases.BaseTestCase;
 import TestCases.Runner.SharedData;
 import org.junit.After;
@@ -27,18 +24,9 @@ public class US_Test_2_Missed_Call_Left_Swipe extends BaseTestCase{
         String testName = new Object() {}.getClass().getEnclosingMethod().getName();
         steps.LogMessage(testName);
 
-        steps.login();
-
-        //        steps.modifyPlusOne(true);
-//                callTimeStamp = steps.leaveMissedCallGalaxy(Helper.getFormattedNumber(DefaultUser.numbers[0].number), DefaultUser.extensions[0].number);
-        //        for testing needs
-
-
-        callTimeStamp = "11:46 AM";
-
-//        steps.ClickByText("Click on Inbox ","Inbox", 0);
-
-        // com.grasshopper.dialer:id/bottom_navigation_container 0
+            steps.login();
+        //        callTimeStamp = steps.leaveMissedCallGalaxy(Helper.getFormattedNumber(DefaultUser.numbers[0].number), DefaultUser.extensions[0].number);
+        //        callTimeStamp = "11:46 AM";
 
         steps.WaitingT(CommonVars.Timeouts.defaultIncomingCallTimeout);
 
@@ -46,10 +34,19 @@ public class US_Test_2_Missed_Call_Left_Swipe extends BaseTestCase{
 
         steps.WaitingT(CommonVars.Timeouts.longActionTimeout);
 
-        steps.getLastCallDetails();
+        steps.ClickByText("Click on All Calls ","All Calls", 0);
 
-        steps.VerifyText("Verify the caller ID on the missed call ", CommonVars.incomingCall);
-        steps.ClickByText("Click the caller ID to call back ", CommonVars.incomingCall, 0);
+        steps.WaitingT(CommonVars.Timeouts.defaultActionTimeout);
+
+        steps.ClickByText("Click on All Calls ","Missed", 0);
+
+        steps.WaitingT(CommonVars.Timeouts.defaultActionTimeout);
+
+        CallDetails lastCallDetails =  steps.getLastCallDetails();
+
+//        steps.VerifyText("Verify the caller ID on the missed call ", CommonVars.incomingCall);
+
+        steps.ClickByText("Click the caller ID to call back ", lastCallDetails.fromNumber, 0);
 
 //        Thread.sleep(CommonVars.Timeouts.defaultActionTimeout);
         steps.checkCallAvailability();
@@ -71,7 +68,7 @@ public class US_Test_2_Missed_Call_Left_Swipe extends BaseTestCase{
 
         Thread.sleep(CommonVars.Timeouts.defaultActionTimeout);
 
-        steps.SwipeLeftfromObject(callTimeStamp, 3000);
+        steps.SwipeLeftfromObject(lastCallDetails.fromNumber, 3000);
 
         Thread.sleep(CommonVars.Timeouts.defaultActionTimeout);
 
@@ -84,13 +81,13 @@ public class US_Test_2_Missed_Call_Left_Swipe extends BaseTestCase{
         steps.ClickById("End Call ", "com.android.incallui:id/endButton");
 
         Thread.sleep(CommonVars.Timeouts.defaultActionTimeout * 2);
-        steps.SwipeLeftfromObject(callTimeStamp, 3000);
+        steps.SwipeLeftfromObject(lastCallDetails.fromNumber, 3000);
 
         steps.VerifyTextByIdInstance("Verify Text back from left swipe ","Text","com.grasshopper.dialer:id/swipe_chat",0);
         steps.ClickByIdInstance("Text back from left swipe ","com.grasshopper.dialer:id/swipe_chat",0);
 
         // не форматируется
-//        steps.VerifyText("Verify Caller ID ", CommonVars.incomingCall);
+        steps.VerifyText("Verify Caller ID ", lastCallDetails.fromNumber);
         Thread.sleep(CommonVars.Timeouts.defaultActionTimeout);
         steps.ClickById("Click Call back ","com.grasshopper.dialer:id/action_call");
         steps.WaitingT(7000);
@@ -110,7 +107,7 @@ public class US_Test_2_Missed_Call_Left_Swipe extends BaseTestCase{
         steps.ClickByText("Click on Recent ","Recent",0);
         steps.WaitingT(8000);
 
-        steps.SwipeLeftfromObject(callTimeStamp, 3000);
+        steps.SwipeLeftfromObject(lastCallDetails.fromNumber, 3000);
 
         steps.ClickById("Click on More ","com.grasshopper.dialer:id/swipe_more");
         steps.ClickById("Add Contact from left swipe ","com.grasshopper.dialer:id/modify_contact");
@@ -124,7 +121,7 @@ public class US_Test_2_Missed_Call_Left_Swipe extends BaseTestCase{
         steps.ClickByText("Clicking Discard", "Discard", 0);
         Thread.sleep(CommonVars.Timeouts.defaultActionTimeout);
 
-        steps.SwipeLeftfromObject(callTimeStamp, 3000);
+        steps.SwipeLeftfromObject(lastCallDetails.fromNumber, 3000);
         steps.ClickById("Click on More ","com.grasshopper.dialer:id/swipe_more");
         steps.VerifyText("Verify Add to Blocked Numbers ","Add to Blocked Numbers");
         steps.ClickByText("Click add to Blocked Numbers ","Add to Blocked Numbers",0);
@@ -134,7 +131,7 @@ public class US_Test_2_Missed_Call_Left_Swipe extends BaseTestCase{
         steps.ScrollToTextClick("Scroll for Blocked Numbers Settings ","Blocked Numbers");
         steps.VerifyText("Verify Blocked Number title ","Blocked Number");
         steps.WaitingT(7000);
-        steps.SwipeLeftfromObject(CommonVars.incomingCall, 3000);
+        steps.SwipeLeftfromObject(lastCallDetails.fromNumber, 3000);
         steps.ClickByIdInstance("Verify Delete Blocked number by left swipe ","com.grasshopper.dialer:id/swipe_delete",0);
 
         Thread.sleep(CommonVars.Timeouts.defaultActionTimeout);
