@@ -715,7 +715,7 @@ public class CommonSteps {
 
         Thread.sleep(9000);
 
-        for(int permissionPage = 0; permissionPage<2; permissionPage++) {
+        for(int permissionPage = 0; permissionPage < 2; permissionPage++) {
 
             if (isElementIsPresent("com.android.packageinstaller:id/permission_message")) {
                 allowAccessPopUp();
@@ -724,10 +724,14 @@ public class CommonSteps {
 
         if (SharedData.isWifiBuild){
             ClickById("Accepting WiFi message", "com.grasshopper.dialer:id/maybe_later");
-            ClickById("Accepting Cellular Data dialog", "android:id/button1");
-        }
-        Thread.sleep(6000);
 
+            try {
+                ClickById("Accepting Cellular Data dialog", "android:id/button1");
+            }
+            catch (Exception e){}
+        }
+
+        Thread.sleep(6000);
 
         TapInTheMiddle("Tap once to remove the first tour banner ","com.grasshopper.dialer:id/toolbar");
         TapInTheMiddle("Tap second time to remove the second tour banner ","com.grasshopper.dialer:id/toolbar");
@@ -1074,18 +1078,15 @@ public class CommonSteps {
         WebElement firstCall = list.get(0);
 
         WebElement fromNumber = firstCall.findElement(MobileBy.AndroidUIAutomator("new UiSelector().resourceId(\"" + "com.grasshopper.dialer:id/from" + "\")"));
+
+        // TODO: add extension parsing as it is now sent as Ext 0 - Representative
         WebElement extension = firstCall.findElement(MobileBy.AndroidUIAutomator("new UiSelector().resourceId(\"" + "com.grasshopper.dialer:id/extension_name" + "\")"));
         WebElement timestamp = firstCall.findElement(MobileBy.AndroidUIAutomator("new UiSelector().resourceId(\"" + "com.grasshopper.dialer:id/received_time" + "\")"));
 
-        return new CallDetails(fromNumber.getText(), timestamp.getText());
-
-        // get
-        // parent com.grasshopper.dialer:id/history_list
-        // child com.grasshopper.dialer:id/swipe with index from 0 to 5 depending on phone
-        // it has com.grasshopper.dialer:id/from with number
-        // com.grasshopper.dialer:id/extension_name with extension to!!!
-        // com.grasshopper.dialer:id/received_time with timestamp
+        // TODO: passing default extension as for now
+        return new CallDetails(fromNumber.getText(), timestamp.getText(), DefaultUser.extensions[0]);
     }
+
     /*
         Returns if element is present on the screen based on the Resource Id.
      */
