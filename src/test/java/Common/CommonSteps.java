@@ -666,30 +666,30 @@ public class CommonSteps {
     }
 
     /*
-    Log specified user in and performs all routine related to clean installation.
-     */
-    public void login(String id, String password) throws InterruptedException {
-        EnterTextById("Enter user name ", id, "com.grasshopper.dialer:id/email_input");
-        EnterTextById("Enter valid password ", password, "com.grasshopper.dialer:id/password_input");
-        ClickById("Click login Button ", "com.grasshopper.dialer:id/sign_in");
+     Log specified user in and performs all routine related to clean installation.
+      */
+    public  void login(String id, String password) throws InterruptedException {
+        EnterTextById("Enter user name ", id,"com.grasshopper.dialer:id/email_input");
+        EnterTextById("Enter valid password ", password,"com.grasshopper.dialer:id/password_input");
+        ClickById("Click login Button ","com.grasshopper.dialer:id/sign_in");
 
-        Thread.sleep(8000);
+        Thread.sleep(20000);
 
-        if (DefaultUser.isUk) {
-            ClickById("Select US Account ", "android:id/button1");
+        if (DefaultUser.isUk){
+            ClickById("Select US Account ","android:id/button1");
             WaitingT(7000);
         }
 
         // Allow permission "To make and manage phone calls"
-        if (isElementIsPresent("com.android.packageinstaller:id/permission_message")) {
-            ClickByXpath("Click Allow button", "//android.widget.Button[@text='ALLOW']");
+        if(isElementIsPresent("com.android.packageinstaller:id/permission_message")) {
+            allowAccessPopUp();
         }
 
         ClearTextFieldById("Cleaning number input", "com.grasshopper.dialer:id/phone_input");
         EnterTextById("Enter correct phone number ", CommonVars.validAccessPoint, "com.grasshopper.dialer:id/phone_input");
 
-        ClickById("Click next from Enter your phone number ", "com.grasshopper.dialer:id/action_next");
-        ClickById("Click Yes Button ", "android:id/button1");
+        ClickById("Click next from Enter your phone number ","com.grasshopper.dialer:id/action_next");
+        ClickById("Click Yes Button ","android:id/button1");
 
         Thread.sleep(9000);
 
@@ -698,8 +698,8 @@ public class CommonSteps {
         Thread.sleep(3000);
 
 
-        if (isElementIsPresent("com.android.packageinstaller:id/permission_message")) {
-            ClickByXpath("Click Allow button", "//android.widget.Button[@text='ALLOW']");
+        if(isElementIsPresent("com.android.packageinstaller:id/permission_message")){
+            allowAccessPopUp();
         }
         Thread.sleep(3000);
 
@@ -712,26 +712,28 @@ public class CommonSteps {
 
         Thread.sleep(9000);
 
-        for (int permissionPage = 0; permissionPage < 2; permissionPage++) {
+        for(int permissionPage = 0; permissionPage < 2; permissionPage++) {
 
             if (isElementIsPresent("com.android.packageinstaller:id/permission_message")) {
-                ClickByXpath("Click Allow button", "//android.widget.Button[@text='ALLOW']");
+                allowAccessPopUp();
             }
         }
 
-        if (SharedData.isWifiBuild) {
+        if (SharedData.isWifiBuild){
             ClickById("Accepting WiFi message", "com.grasshopper.dialer:id/maybe_later");
-//            ClickById("Accepting Cellular Data dialog", "android:id/button1");
+
+            try {
+                ClickById("Accepting Cellular Data dialog", "android:id/button1");
+            }
+            catch (Exception e){}
         }
+
         Thread.sleep(6000);
 
-
-        TapInTheMiddle("Tap once to remove the first tour banner ", "com.grasshopper.dialer:id/toolbar");
-        TapInTheMiddle("Tap second time to remove the second tour banner ", "com.grasshopper.dialer:id/toolbar");
-        TapInTheMiddle("Tap third time to remove the third tour banner ", "com.grasshopper.dialer:id/toolbar");
+        TapInTheMiddle("Tap once to remove the first tour banner ","com.grasshopper.dialer:id/toolbar");
+        TapInTheMiddle("Tap second time to remove the second tour banner ","com.grasshopper.dialer:id/toolbar");
+        TapInTheMiddle("Tap third time to remove the third tour banner ","com.grasshopper.dialer:id/toolbar");
     }
-
-
     /*
     Dails specified number and extension on Motorolla.
      */
@@ -1062,19 +1064,14 @@ public class CommonSteps {
         WebElement firstCall = list.get(0);
 
         WebElement fromNumber = firstCall.findElement(MobileBy.AndroidUIAutomator("new UiSelector().resourceId(\"" + "com.grasshopper.dialer:id/from" + "\")"));
+
+        // TODO: add extension parsing as it is now sent as Ext 0 - Representative
         WebElement extension = firstCall.findElement(MobileBy.AndroidUIAutomator("new UiSelector().resourceId(\"" + "com.grasshopper.dialer:id/extension_name" + "\")"));
         WebElement timestamp = firstCall.findElement(MobileBy.AndroidUIAutomator("new UiSelector().resourceId(\"" + "com.grasshopper.dialer:id/received_time" + "\")"));
 
-        return new CallDetails(fromNumber.getText(), timestamp.getText());
-
-        // get
-        // parent com.grasshopper.dialer:id/history_list
-        // child com.grasshopper.dialer:id/swipe with index from 0 to 5 depending on phone
-        // it has com.grasshopper.dialer:id/from with number
-        // com.grasshopper.dialer:id/extension_name with extension to!!!
-        // com.grasshopper.dialer:id/received_time with timestamp
+        // TODO: passing default extension as for now
+        return new CallDetails(fromNumber.getText(), timestamp.getText(), DefaultUser.extensions[0]);
     }
-
     /*
         Returns if element is present on the screen based on the Resource Id.
      */
@@ -1101,6 +1098,9 @@ public class CommonSteps {
             throw e;
         }
 
+    }
+    public void allowAccessPopUp() {
+        ClickByXpath("Click Allow button", "//android.widget.Button[@text='ALLOW']");
     }
 
 }
